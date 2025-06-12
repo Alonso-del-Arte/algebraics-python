@@ -3,6 +3,10 @@
 WORK IN PROGRESS. This is for algebraic number theory, such as imaginary 
 quadratic rings, pure cubic numbers and so on and so forth.
 
+This is similar to my algebraic integer calculator project in Java. The 
+conceptual differences due to Java being strongly typed and Python not being as 
+strongly typed might not be as great as I imagined.
+
 I might be duplicating effort that has already been made for Python. But if 
 nothing else, this will help me understand object-oriented programming in 
 Python.
