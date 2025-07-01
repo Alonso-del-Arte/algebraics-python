@@ -12,5 +12,11 @@ nothing else, this will help me understand object-oriented programming in
 Python.
 
 As I figure out what is idiomatic in Python, I will do a lot of things the way I
-do them in Java, which might not always be proper Python.
+do them in Java, which might not always be proper Python. The most obvious of 
+these pertain to naming conventions.
+
+Far more importantly, however, the concept of inheritance, even with relatively 
+shallow inheritance hierarchies, is turning out to be more difficult than I 
+expected, such as the differences with abstract classes and the singleton 
+pattern.
 
