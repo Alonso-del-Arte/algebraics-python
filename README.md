@@ -20,3 +20,9 @@ shallow inheritance hierarchies, is turning out to be more difficult than I
 expected, such as the differences with abstract classes and the singleton 
 pattern.
 
+Note to self: Run tests at project root level with
+
+```
+python3 -m test.ringstest
+```
+
