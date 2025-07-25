@@ -7,7 +7,7 @@ class IntegerRing :
         return True
     
     def discriminant(self) :
-        return 0
+        return 1
 
 class QuadraticRing(IntegerRing) :
 
