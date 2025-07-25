@@ -10,5 +10,9 @@ class TestIntegerRing(unittest.TestCase) :
         message = "Reckoning degree of Z"
         self.assertEqual(actual, expected, message)
         
+    def test_is_purely_real(self) :
+        instance = IntegerRing()
+        assert instance.is_purely_real(), "Z is purely real"
+        
 if __name__ == '__main__' :
     unittest.main()
