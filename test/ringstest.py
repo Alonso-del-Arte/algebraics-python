@@ -3,6 +3,12 @@ from src.rings import IntegerRing
 
 class TestIntegerRing(unittest.TestCase) :
     
+    def test_str(self) :
+        instance = IntegerRing()
+        expected = "Z"
+        actual = instance.__str__()
+        self.assertEqual(expected, actual)
+    
     def test_max_degree(self) :
         instance = IntegerRing()
         expected = 1
