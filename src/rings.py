@@ -2,6 +2,9 @@ class IntegerRing :
     
     def max_degree(self) :
         return 1
+    
+    def is_purely_real(self) :
+        return False
 
 class QuadraticRing(IntegerRing) :
 
