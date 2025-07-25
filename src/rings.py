@@ -4,7 +4,7 @@ class IntegerRing :
         return 1
     
     def is_purely_real(self) :
-        return False
+        return True
 
 class QuadraticRing(IntegerRing) :
 
