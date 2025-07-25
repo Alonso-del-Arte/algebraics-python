@@ -5,6 +5,9 @@ class IntegerRing :
     
     def is_purely_real(self) :
         return True
+    
+    def discriminant(self) :
+        return 0
 
 class QuadraticRing(IntegerRing) :
 
