@@ -19,4 +19,3 @@ class QuadraticInteger(AlgebraicInteger) :
 
     def __init__(self, ring) :
         self.quad_ring = ring
-
