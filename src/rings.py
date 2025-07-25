@@ -1,7 +1,7 @@
 class IntegerRing :
     
     def max_degree(self) :
-        return 0
+        return 1
 
 class QuadraticRing(IntegerRing) :
 
