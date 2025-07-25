@@ -14,5 +14,12 @@ class TestIntegerRing(unittest.TestCase) :
         instance = IntegerRing()
         assert instance.is_purely_real(), "Z is purely real"
         
+    def test_discriminant(self) :
+        instance = IntegerRing()
+        expected = 1
+        actual = instance.discriminant()
+        message = "Reckoning discriminant of Z"
+        self.assertEqual(actual, expected, message)
+        
 if __name__ == '__main__' :
     unittest.main()
