@@ -14,5 +14,5 @@ class IntegerRing :
 
 class QuadraticRing(IntegerRing) :
 
-    def __init__(self) :
+    def __init__(self, d) :
         print('PLACEHOLDER 2')
