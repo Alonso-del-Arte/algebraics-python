@@ -1,5 +1,8 @@
 class IntegerRing :
     
+    def __str__(self) :
+        return "Z"
+    
     def max_degree(self) :
         return 1
     
