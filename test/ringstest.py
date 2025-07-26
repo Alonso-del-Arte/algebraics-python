@@ -8,6 +8,11 @@ class TestIntegerRing(unittest.TestCase) :
         expected = "Z"
         actual = instance.__str__()
         self.assertEqual(expected, actual)
+        
+    def test_equals(self) :
+        expected = IntegerRing()
+        actual = IntegerRing()
+        self.assertEqual(expected, actual)
     
     def test_max_degree(self) :
         instance = IntegerRing()
