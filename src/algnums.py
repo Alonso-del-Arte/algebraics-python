@@ -7,6 +7,10 @@ class AlgebraicInteger :
         return str(self.num)
 
     # TODO: Write tests for this
+    def ring(self) :
+        return None
+    
+    # TODO: Write tests for this
     def algebraic_degree() :
         return -1
 
