@@ -24,7 +24,7 @@ class AlgebraicInteger :
 
     # TODO: Write tests for this
     def abs(self) :
-        return -7
+        return self.num
 
 class QuadraticInteger(AlgebraicInteger) :
 
