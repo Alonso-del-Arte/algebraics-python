@@ -22,6 +22,10 @@ class AlgebraicInteger :
     def norm() :
         return -5
 
+    # TODO: Write tests for this
+    def abs() :
+        return -7
+
 class QuadraticInteger(AlgebraicInteger) :
 
     def __init__(self, ring) :
