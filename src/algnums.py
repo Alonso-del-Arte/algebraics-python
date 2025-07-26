@@ -1,7 +1,10 @@
 class AlgebraicInteger :
 
     def __init__(self, n) :
-        pass
+        self.num = n
+        
+    def __str__(self) :
+        return str(self.num)
 
     # TODO: Write tests for this
     def algebraic_degree() :
