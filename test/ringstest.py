@@ -1,6 +1,11 @@
 import unittest
 from src.rings import IntegerRing
 
+class MockRing(IntegerRing) :
+    
+    def max_degree(self) :
+        return 25
+
 class TestIntegerRing(unittest.TestCase) :
     
     def test_str(self) :
@@ -13,6 +18,11 @@ class TestIntegerRing(unittest.TestCase) :
         expected = IntegerRing()
         actual = IntegerRing()
         self.assertEqual(expected, actual)
+        
+    def test_not_equals(self) :
+        unexpected = IntegerRing()
+        actual = MockRing()
+        self.assertNotEqual(unexpected, actual)
     
     def test_max_degree(self) :
         instance = IntegerRing()
