@@ -11,6 +11,12 @@ class AlgebraicIntegerTest(unittest.TestCase) :
         expected = str(n)
         actual = instance.__str__()
         self.assertEqual(expected, actual)
+        
+    def test_abs_already_positive(self) :
+        expected = random.randrange(1, 65536)
+        instance = AlgebraicInteger(expected)
+        actual = instance.abs()
+        self.assertEqual(expected, actual)
 
 if __name__ == '__main__' :
     unittest.main()
