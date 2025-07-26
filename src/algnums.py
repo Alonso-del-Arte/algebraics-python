@@ -1,7 +1,7 @@
 class AlgebraicInteger :
 
-    def __init__(self) :
-        print('PLACEHOLDER 3')
+    def __init__(self, n) :
+        pass
 
     # TODO: Write tests for this
     def algebraic_degree() :
