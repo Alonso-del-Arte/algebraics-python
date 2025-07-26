@@ -11,19 +11,19 @@ class AlgebraicInteger :
         return None
     
     # TODO: Write tests for this
-    def algebraic_degree() :
+    def algebraic_degree(self) :
         return -1
 
     # TODO: Write tests for this
-    def trace() :
+    def trace(self) :
         return -3
 
     # TODO: Write tests for this
-    def norm() :
+    def norm(self) :
         return -5
 
     # TODO: Write tests for this
-    def abs() :
+    def abs(self) :
         return -7
 
 class QuadraticInteger(AlgebraicInteger) :
