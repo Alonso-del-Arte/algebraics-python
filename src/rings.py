@@ -3,6 +3,9 @@ class IntegerRing :
     def __str__(self) :
         return "Z"
     
+    def __eq__(self, other) :
+        return True
+    
     def max_degree(self) :
         return 1
     
