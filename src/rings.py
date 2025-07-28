@@ -1,10 +1,13 @@
 class IntegerRing :
     
+    def __init__(self) :
+        pass
+    
     def __str__(self) :
         return "Z"
     
     def __eq__(self, other) :
-        return True
+        return type(self) == type(other) and other.max_degree() == 1
     
     def max_degree(self) :
         return 1
