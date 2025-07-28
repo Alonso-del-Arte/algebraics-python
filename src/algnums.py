@@ -1,3 +1,5 @@
+from src.rings import IntegerRing
+
 class AlgebraicInteger :
 
     def __init__(self, n) :
@@ -6,9 +8,8 @@ class AlgebraicInteger :
     def __str__(self) :
         return str(self.num)
 
-    # TODO: Write tests for this
     def ring(self) :
-        return None
+        return IntegerRing()
     
     # TODO: Write tests for this
     def algebraic_degree(self) :
