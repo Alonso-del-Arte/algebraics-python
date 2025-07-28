@@ -2,6 +2,7 @@ import random
 import unittest
 
 from src.algnums import AlgebraicInteger
+from src.rings import IntegerRing
 
 class AlgebraicIntegerTest(unittest.TestCase) :
     
@@ -10,6 +11,13 @@ class AlgebraicIntegerTest(unittest.TestCase) :
         instance = AlgebraicInteger(n)
         expected = str(n)
         actual = instance.__str__()
+        self.assertEqual(expected, actual)
+        
+    def test_ring(self) :
+        n = random.randrange(-32768, 32767)
+        instance = AlgebraicInteger(n)
+        expected = IntegerRing()
+        actual = instance.ring()
         self.assertEqual(expected, actual)
         
     def test_abs_already_positive(self) :
