@@ -9,9 +9,8 @@ class IntegerRing :
     def HTMLstr(self) :
         return "&#x2124;"
     
-    # TODO: Write tests for this
     def TeXstr(self) :
-        return self.__str__()
+        return "\\mathbb Z"
     
     def __eq__(self, other) :
         return type(self) == type(other) and other.max_degree() == 1
