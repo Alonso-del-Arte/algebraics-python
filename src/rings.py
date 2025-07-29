@@ -6,9 +6,8 @@ class IntegerRing :
     def __str__(self) :
         return "Z"
     
-    # TODO: Write tests for this
     def HTMLstr(self) :
-        return self.__str__()
+        return "&#x2124;"
     
     # TODO: Write tests for this
     def TeXstr(self) :
