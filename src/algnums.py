@@ -7,6 +7,14 @@ class AlgebraicInteger :
         
     def __str__(self) :
         return str(self.num)
+    
+    # TODO: Write tests for this
+    def HTMLstr(self) :
+        return "???"
+    
+    # TODO: Write tests for this
+    def TeXstr(self) :
+        return "???"
 
     def ring(self) :
         return IntegerRing()

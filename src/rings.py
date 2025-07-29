@@ -6,6 +6,14 @@ class IntegerRing :
     def __str__(self) :
         return "Z"
     
+    # TODO: Write tests for this
+    def HTMLstr(self) :
+        return self.__str__()
+    
+    # TODO: Write tests for this
+    def TeXstr(self) :
+        return self.__str__()
+    
     def __eq__(self, other) :
         return type(self) == type(other) and other.max_degree() == 1
     
