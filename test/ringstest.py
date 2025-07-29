@@ -22,6 +22,12 @@ class TestIntegerRing(unittest.TestCase) :
         message = actual + " should be " + expectedA + " or " + expectedB
         assert actual == expectedA or actual == expectedB, message
         
+    def test_TeXstr(self) :
+        instance = IntegerRing()
+        expected = "\\mathbb Z"
+        actual = instance.TeXstr()
+        self.assertEqual(expected, actual)
+        
     def test_equals(self) :
         expected = IntegerRing()
         actual = IntegerRing()
