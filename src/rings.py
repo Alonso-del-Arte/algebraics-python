@@ -13,7 +13,7 @@ class IntegerRing :
         return "&#x2124;"
     
     def TeX_str(self) :
-        return "? \\mathbb Z ?"
+        return "\\textbf Z"
     
     def TeX_blackboardbold_str(self) :
         return "\\mathbb Z"
