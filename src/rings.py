@@ -6,11 +6,17 @@ class IntegerRing :
     def __str__(self) :
         return "Z"
     
-    def HTMLstr(self) :
-        return "&#x2124;"
+    def HTML_str(self) :
+        return "? &#x2124; ?"
     
-    def TeXstr(self) :
-        return "\\mathbb Z"
+    def HTML_blackboardbold_str(self) :
+        return "? &#x2124; ?"
+    
+    def TeX_str(self) :
+        return "? \\mathbb Z ?"
+    
+    def TeX_blackboardbold_str(self) :
+        return "? \\mathbb Z ?"
     
     def __eq__(self, other) :
         return type(self) == type(other) and other.max_degree() == 1
