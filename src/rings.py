@@ -10,13 +10,13 @@ class IntegerRing :
         return "? &#x2124; ?"
     
     def HTML_blackboardbold_str(self) :
-        return "? &#x2124; ?"
+        return "&#x2124;"
     
     def TeX_str(self) :
         return "? \\mathbb Z ?"
     
     def TeX_blackboardbold_str(self) :
-        return "? \\mathbb Z ?"
+        return "\\mathbb Z"
     
     def __eq__(self, other) :
         return type(self) == type(other) and other.max_degree() == 1
