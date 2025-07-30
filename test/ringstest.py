@@ -14,6 +14,12 @@ class TestIntegerRing(unittest.TestCase) :
         actual = instance.__str__()
         self.assertEqual(expected, actual)
     
+    def test_HTML_str(self) :
+        instance = IntegerRing()
+        expected = "<b>Z</b>"
+        actual = instance.HTML_str()
+        self.assertEqual(expected, actual)
+        
     def test_HTML_blackboardbold_str(self) :
         instance = IntegerRing()
         expectedA = "&#x2124;"
