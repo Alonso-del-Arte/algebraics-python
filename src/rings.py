@@ -7,7 +7,7 @@ class IntegerRing :
         return "Z"
     
     def HTML_str(self) :
-        return "? &#x2124; ?"
+        return "<b>Z</b>"
     
     def HTML_blackboardbold_str(self) :
         return "&#x2124;"
