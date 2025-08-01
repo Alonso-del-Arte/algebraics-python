@@ -10,7 +10,7 @@ class AlgebraicInteger :
     
     # TODO: Write tests for this
     def HTML_str(self) :
-        return "???"
+        return str(self.num)
     
     def TeX_str(self) :
         return str(self.num)
