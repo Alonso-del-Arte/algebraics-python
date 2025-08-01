@@ -21,7 +21,7 @@ class AlgebraicInteger :
     
     # TODO: Write tests for this
     def algebraic_degree(self) :
-        return -1
+        return 1
 
     # TODO: Write tests for this
     def trace(self) :
