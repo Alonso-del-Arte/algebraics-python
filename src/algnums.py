@@ -9,11 +9,11 @@ class AlgebraicInteger :
         return str(self.num)
     
     # TODO: Write tests for this
-    def HTMLstr(self) :
+    def HTML_str(self) :
         return "???"
     
     # TODO: Write tests for this
-    def TeXstr(self) :
+    def TeX_str(self) :
         return "???"
 
     def ring(self) :
