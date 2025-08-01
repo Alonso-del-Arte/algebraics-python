@@ -14,7 +14,7 @@ class AlgebraicInteger :
         return str(self.num)
     
     def TeX_str(self) :
-        return str(self.num)
+        return self.__str__()
 
     def ring(self) :
         return IntegerRing()
