@@ -8,8 +8,9 @@ class AlgebraicInteger :
     def __str__(self) :
         return str(self.num)
     
-    # TODO: Write tests for this
     def HTML_str(self) :
+        if self.num < 0 :
+            return "&minus;" + str(-self.num)
         return str(self.num)
     
     def TeX_str(self) :
