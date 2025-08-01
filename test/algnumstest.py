@@ -41,6 +41,15 @@ class AlgebraicIntegerTest(unittest.TestCase) :
         actual = instance.ring()
         self.assertEqual(expected, actual)
         
+    def test_algebraic_degree(self) :
+        n = 0
+        while n == 0 :
+            n = random.randrange(-65536, 65535)
+        instance = AlgebraicInteger(n)
+        expected = 1
+        actual = instance.algebraic_degree()
+        self.assertEqual(expected, actual)
+        
     def test_abs_already_positive(self) :
         expected = random.randrange(1, 65536)
         instance = AlgebraicInteger(expected)
