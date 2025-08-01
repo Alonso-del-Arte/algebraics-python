@@ -20,6 +20,13 @@ class AlgebraicIntegerTest(unittest.TestCase) :
         actual = instance.HTML_str()
         self.assertEqual(expected, actual)
         
+    def test_HTML_str(self) :
+        n = random.randrange(1, 32768)
+        instance = AlgebraicInteger(-n)
+        expected = "&minus;" + str(n)
+        actual = instance.HTML_str()
+        self.assertEqual(expected, actual)
+        
     def test_TeX_str(self) :
         n = random.randrange(-32768, 32767)
         instance = AlgebraicInteger(n)
