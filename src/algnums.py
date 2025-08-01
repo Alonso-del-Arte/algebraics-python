@@ -19,8 +19,9 @@ class AlgebraicInteger :
     def ring(self) :
         return IntegerRing()
     
-    # TODO: Write tests for this
     def algebraic_degree(self) :
+        if self.num == 0 :
+            return 0
         return 1
 
     # TODO: Write tests for this
