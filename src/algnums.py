@@ -12,9 +12,8 @@ class AlgebraicInteger :
     def HTML_str(self) :
         return "???"
     
-    # TODO: Write tests for this
     def TeX_str(self) :
-        return "???"
+        return str(self.num)
 
     def ring(self) :
         return IntegerRing()
