@@ -1,1 +1,32 @@
+import math
+import random
+import src.numth
 import unittest
+
+class TestNumTh(unittest.TestCase) :
+    
+    SMALL_PRIMES = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 
+                    59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 
+                    127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 
+                    191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 
+                    257, 263, 269, 271]
+    
+    NUMBER_OF_SMALL_PRIMES = len(SMALL_PRIMES)
+    
+    def _choose_squarefree_number(self) :
+        omega = random.randrange(1, self.NUMBER_OF_SMALL_PRIMES)
+        factors = set()
+        for i in range(omega - 1) :
+            index = random.randrange(1, self.NUMBER_OF_SMALL_PRIMES)
+            factor = self.SMALL_PRIMES[index]
+            factors.add(factor)
+        return math.prod(factors)
+    
+    def test_squarefree(self) :
+        num = self._choose_squarefree_number()
+        msg = "Number " + str(num) + " should be found to be squarefree"
+        assert src.numth.squarefree(num), msg
+
+if __name__ == '__main__' :
+    unittest.main()
+    
