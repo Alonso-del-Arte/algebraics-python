@@ -17,7 +17,7 @@ class TestNumTh(unittest.TestCase) :
         omega = random.randrange(1, self.NUMBER_OF_SMALL_PRIMES)
         factors = set()
         for i in range(omega - 1) :
-            index = random.randrange(1, self.NUMBER_OF_SMALL_PRIMES)
+            index = random.randrange(0, self.NUMBER_OF_SMALL_PRIMES - 1)
             factor = self.SMALL_PRIMES[index]
             factors.add(factor)
         return math.prod(factors)
