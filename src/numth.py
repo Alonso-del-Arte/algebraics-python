@@ -1,3 +1,13 @@
-# TODO: Write tests for this
+import math
+
 def squarefree(num) :
-    return True
+    if num % 4 == 0 :
+        return False
+    threshold = math.sqrt(abs(num))
+    all_distinct_so_far = True
+    root = 3
+    while all_distinct_so_far and root <= threshold :
+        square = root * root
+        all_distinct_so_far = (num % square != 0)
+        root += 2
+    return all_distinct_so_far
