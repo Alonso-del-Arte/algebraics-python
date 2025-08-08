@@ -2,6 +2,14 @@ import math
 
 # TODO: Optimize, fine-tune
 def squarefree(num) :
+    if num == 1 :
+        return False
+    if num == 0 :
+        return True
+    if num == -1 :
+        return False
+    if num < -1 :
+        return False
     if num % 4 == 0 :
         return False
     threshold = math.sqrt(abs(num))
