@@ -4,8 +4,6 @@ import math
 def squarefree(num) :
     if num == 1 :
         return True
-    if num == 0 :
-        return False
     if num == -1 :
         return True
     if num % 4 == 0 :
