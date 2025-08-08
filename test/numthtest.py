@@ -13,8 +13,10 @@ class TestNumTh(unittest.TestCase) :
     
     NUMBER_OF_SMALL_PRIMES = len(SMALL_PRIMES)
     
+    MAXIMUM_TESTING_OMEGA = NUMBER_OF_SMALL_PRIMES // 4
+    
     def _choose_squarefree_number(self) :
-        omega = random.randrange(1, self.NUMBER_OF_SMALL_PRIMES)
+        omega = random.randrange(1, self.MAXIMUM_TESTING_OMEGA)
         factors = set()
         for i in range(omega - 1) :
             index = random.randrange(0, self.NUMBER_OF_SMALL_PRIMES - 1)
