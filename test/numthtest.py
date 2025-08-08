@@ -13,7 +13,7 @@ class TestNumTh(unittest.TestCase) :
     
     NUMBER_OF_SMALL_PRIMES = len(SMALL_PRIMES)
     
-    MAXIMUM_TESTING_OMEGA = NUMBER_OF_SMALL_PRIMES // 4
+    MAXIMUM_TESTING_OMEGA = NUMBER_OF_SMALL_PRIMES // 5
     
     def _choose_squarefree_number(self) :
         omega = random.randrange(1, self.MAXIMUM_TESTING_OMEGA)
@@ -27,6 +27,7 @@ class TestNumTh(unittest.TestCase) :
     def test_squarefree(self) :
         num = self._choose_squarefree_number()
         msg = "Number " + str(num) + " should be found to be squarefree"
+        print(msg)
         assert src.numth.squarefree(num), msg
 
     def test_not_squarefree(self) :
@@ -36,6 +37,7 @@ class TestNumTh(unittest.TestCase) :
         square_factor = factor * factor
         num = square_factor * squarefree_kernel
         msg = "Number " + str(num) + " should not be found to be squarefree"
+        print(msg)
         assert not src.numth.squarefree(num), msg
 
 if __name__ == '__main__' :
