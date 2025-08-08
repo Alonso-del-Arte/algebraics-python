@@ -55,5 +55,15 @@ class TestNumTh(unittest.TestCase) :
         print(msg)
         assert not src.numth.squarefree(num), msg
 
+    def test_negative_not_squarefree(self) :
+        squarefree_kernel = self._choose_squarefree_number()
+        index = random.randrange(0, self.NUMBER_OF_SMALL_PRIMES - 1)
+        factor = self.SMALL_PRIMES[index]
+        square_factor = factor * factor
+        num = -square_factor * squarefree_kernel
+        msg = "Number " + str(num) + " should not be found to be squarefree"
+        print(msg)
+        assert not src.numth.squarefree(num), msg
+
 if __name__ == '__main__' :
     unittest.main()
