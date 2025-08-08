@@ -5,7 +5,7 @@ def squarefree(num) :
     if num == 1 :
         return True
     if num == 0 :
-        return True
+        return False
     if num == -1 :
         return True
     if num < -1 :
