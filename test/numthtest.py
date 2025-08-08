@@ -29,7 +29,6 @@ class TestNumTh(unittest.TestCase) :
         msg = "Number " + str(num) + " should be found to be squarefree"
         assert src.numth.squarefree(num), msg
 
-    @unittest.skip("Need to adjust omega")
     def test_not_squarefree(self) :
         squarefree_kernel = self._choose_squarefree_number()
         index = random.randrange(0, self.NUMBER_OF_SMALL_PRIMES - 1)
