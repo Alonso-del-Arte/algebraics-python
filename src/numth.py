@@ -9,7 +9,7 @@ def squarefree(num) :
     if num == -1 :
         return True
     if num < -1 :
-        return False
+        return True
     if num % 4 == 0 :
         return False
     threshold = math.sqrt(abs(num))
