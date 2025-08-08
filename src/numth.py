@@ -1,5 +1,6 @@
 import math
 
+# TODO: Optimize, fine-tune
 def squarefree(num) :
     if num % 4 == 0 :
         return False
