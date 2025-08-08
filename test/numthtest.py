@@ -33,6 +33,9 @@ class TestNumTh(unittest.TestCase) :
     def test_1_is_squarefree(self) :
         assert src.numth.squarefree(1), "1 should be found to be squarefree"
 
+    def test_0_is_not_squarefree(self) :
+        assert not src.numth.squarefree(0), "0 shouldn't be found squarefree"
+
     def test_negative_1_is_squarefree(self) :
         assert src.numth.squarefree(-1), "-1 should be found to be squarefree"
 
