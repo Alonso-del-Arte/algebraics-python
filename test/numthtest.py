@@ -39,6 +39,12 @@ class TestNumTh(unittest.TestCase) :
     def test_negative_1_is_squarefree(self) :
         assert src.numth.squarefree(-1), "-1 should be found to be squarefree"
 
+    def test_negative_squarefree(self) :
+        num = -self._choose_squarefree_number()
+        msg = "Number " + str(num) + " should be found to be squarefree"
+        print(msg)
+        assert src.numth.squarefree(num), msg
+    
     def test_not_squarefree(self) :
         squarefree_kernel = self._choose_squarefree_number()
         index = random.randrange(0, self.NUMBER_OF_SMALL_PRIMES - 1)
