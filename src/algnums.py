@@ -34,8 +34,24 @@ class AlgebraicInteger :
 
     def abs(self) :
         return abs(self.num)
+    
+    # TODO: Write tests for this
+    def __add__(self, addend) :
+        return self
+
+    # TODO: Write tests for this
+    def __sub__(self, subtrahend) :
+        return self
+
+    # TODO: Write tests for this
+    def __mul__(self, multiplicand) :
+        return self
+
+    # TODO: Write tests for this
+    def __floordiv__(self, divisor) :
+        return self
 
 class QuadraticInteger(AlgebraicInteger) :
 
-    def __init__(self, ring) :
+    def __init__(self, a, b, ring) :
         self.quad_ring = ring
