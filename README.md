@@ -25,3 +25,5 @@ Note to self: Run tests at project root level with
 ```
 python3 -m test.ringstest
 ```
+
+replacing `ringstest` when necessary.
