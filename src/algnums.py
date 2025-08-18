@@ -44,11 +44,19 @@ class AlgebraicInteger :
         return self
 
     # TODO: Write tests for this
+    def __neg__(self, divisor) :
+        return self
+
+    # TODO: Write tests for this
     def __mul__(self, multiplicand) :
         return self
 
     # TODO: Write tests for this
     def __floordiv__(self, divisor) :
+        return self
+
+    # TODO: Write tests for this
+    def __mod__(self, divisor) :
         return self
 
 class QuadraticInteger(AlgebraicInteger) :
