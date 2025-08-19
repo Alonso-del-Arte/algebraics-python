@@ -4,9 +4,10 @@ def euclidean_gcd(a, b) :
 
 class Fraction :
     
+    # TODO: Write tests for this
     def __init__(self, numer, denom) :
-        self.numerator = numer
-        self.denominator = denom
+        self.numerator = denom
+        self.denominator = numer
 
     # TODO: Write tests for this
     def HTML_str(self) :
