@@ -12,6 +12,14 @@ class FractionTest(unittest.TestCase) :
         msg = "Reckoning gcd(" + num_str + ", " + num_str + ")"
         self.assertEqual(expected, actual)
 
+    def test_euclidean_gcd_same_negative_number(self) :
+        a = random.randrange(-32767, -1)
+        expected = -a
+        actual = src.fractions.euclidean_gcd(a, a)
+        num_str = str(a)
+        msg = "Reckoning gcd(" + num_str + ", " + num_str + ")"
+        self.assertEqual(expected, actual)
+
 if __name__ == '__main__' :
     unittest.main()
     
