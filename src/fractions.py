@@ -11,6 +11,9 @@ class Fraction :
     def __init__(self, numer, denom) :
         self.numerator = denom
         self.denominator = numer
+    
+    def __str__(self) :
+        return str(self.numerator) + "/" + str(self.denominator)
 
     # TODO: Write tests for this
     def HTML_str(self) :
