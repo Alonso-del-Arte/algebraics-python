@@ -27,6 +27,14 @@ class FractionTest(unittest.TestCase) :
         actual = src.fractions.euclidean_gcd(a, b)
         msg = "Reckoning gcd(" + str(a) + ", " + str(b) + ")"
         self.assertEqual(expected, actual, msg)
+    
+    def test_str(self) :
+        numer = random.randrange(1, 32767)
+        denom = numer + 1
+        instance = src.fractions.Fraction(numer, denom)
+        expected = str(numer) + "/" + str(denom)
+        actual = instance.__str__()
+        self.assertEqual(expected, actual)
 
 if __name__ == '__main__' :
     unittest.main()
