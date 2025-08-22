@@ -62,6 +62,15 @@ class FractionTest(unittest.TestCase) :
         actual = instance.__str__()
         self.assertEqual(expected, actual)
 
+    def test_HTML_str(self) :
+        numer = random.randrange(1, 32767)
+        denom = numer + 1
+        instance = src.fractions.Fraction(numer, denom)
+        middle_part = "</sup>&frasl;<sub>"
+        expected = "<sup>" + str(numer) + middle_part + str(denom) + "<sub>"
+        actual = instance.HTML_str()
+        self.assertEqual(expected, actual)
+    
 if __name__ == '__main__' :
     unittest.main()
     
