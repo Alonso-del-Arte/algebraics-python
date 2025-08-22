@@ -19,7 +19,10 @@ class Fraction :
 
     # TODO: Write tests for this
     def HTML_str(self) :
-        return "SORRY, NOT IMPLEMENTED YET"
+        numer_part = "<sup>" + str(self.numerator)
+        middle_part = "</sup>&frasl;<sub>"
+        denom_part = str(self.denominator) + "</sub>"
+        return numer_part + middle_part + denom_part
     
     # TODO: Write tests for this
     def TeX_str(self) :
