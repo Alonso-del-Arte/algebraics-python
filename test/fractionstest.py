@@ -106,5 +106,29 @@ class FractionTest(unittest.TestCase) :
         actual = instance.TeX_str()
         self.assertEqual(expected, actual)
 
+    def test_constructor_sets_numerator_from_not_lowest_terms(self) :
+        expected = random.randrange(1, 1024)
+        denom = 3 * expected + 2
+        power = 5 ** random.randrange(2, 10)
+        multiplier = power * expected * denom
+        show_numer = multiplier * expected
+        show_denom = multiplier * denom
+        instance = src.fractions.Fraction(show_numer, show_denom)
+        actual = instance.numerator
+        message = "Fraction is " + str(expected) + "/" + str(denom)
+        self.assertEqual(expected, actual, message)
+    
+    def test_constructor_sets_denominator_from_not_lowest_terms(self) :
+        numer = random.randrange(1, 1024)
+        expected = 5 * numer + 1
+        power = 3 ** random.randrange(2, 12)
+        multiplier = power * numer * expected
+        show_numer = multiplier * numer
+        show_denom = multiplier * expected
+        instance = src.fractions.Fraction(show_numer, show_denom)
+        actual = instance.denominator
+        message = "Fraction is " + str(numer) + "/" + str(expected)
+        self.assertEqual(expected, actual, message)
+    
 if __name__ == '__main__' :
     unittest.main()
