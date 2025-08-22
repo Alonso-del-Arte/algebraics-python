@@ -7,6 +7,7 @@ def euclidean_gcd(a, b) :
 
 class Fraction :
     
+    # TODO: Refactor constructor to reduce fraction to lowest terms
     def __init__(self, numer, denom) :
         self.numerator = numer
         self.denominator = denom
@@ -17,11 +18,13 @@ class Fraction :
         prop_denom = self.denominator // gcd
         return str(prop_numer) + "/" + str(prop_denom)
 
-    # TODO: Write tests for this
     def HTML_str(self) :
-        numer_part = "<sup>" + str(self.numerator)
+        gcd = euclidean_gcd(self.numerator, self.denominator)
+        prop_numer = self.numerator // gcd
+        prop_denom = self.denominator // gcd
+        numer_part = "<sup>" + str(prop_numer)
         middle_part = "</sup>&frasl;<sub>"
-        denom_part = str(self.denominator) + "</sub>"
+        denom_part = str(prop_denom) + "</sub>"
         return numer_part + middle_part + denom_part
     
     # TODO: Write tests for this
