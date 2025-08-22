@@ -28,6 +28,13 @@ class FractionTest(unittest.TestCase) :
         msg = "Reckoning gcd(" + str(a) + ", " + str(b) + ")"
         self.assertEqual(expected, actual, msg)
     
+    def test_constructor_sets_numerator(self) :
+        expected = random.randrange(1, 1024)
+        denom = 2 * expected + 1
+        instance = src.fractions.Fraction(expected, denom)
+        actual = instance.numerator
+        self.assertEqual(expected, actual)
+    
     def test_str(self) :
         numer = random.randrange(1, 32767)
         denom = numer + 1
