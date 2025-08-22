@@ -67,7 +67,7 @@ class FractionTest(unittest.TestCase) :
         denom = numer + 1
         instance = src.fractions.Fraction(numer, denom)
         middle_part = "</sup>&frasl;<sub>"
-        expected = "<sup>" + str(numer) + middle_part + str(denom) + "<sub>"
+        expected = "<sup>" + str(numer) + middle_part + str(denom) + "</sub>"
         actual = instance.HTML_str()
         self.assertEqual(expected, actual)
     
