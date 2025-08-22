@@ -27,10 +27,12 @@ class Fraction :
         denom_part = str(prop_denom) + "</sub>"
         return numer_part + middle_part + denom_part
     
-    # TODO: Write tests for this
     def TeX_str(self) :
-        numer_part = "\\frac{" + str(self.numerator)
-        denom_part = "}{" + str(self.denominator) + "}"
+        gcd = euclidean_gcd(self.numerator, self.denominator)
+        prop_numer = self.numerator // gcd
+        prop_denom = self.denominator // gcd
+        numer_part = "\\frac{" + str(prop_numer)
+        denom_part = "}{" + str(prop_denom) + "}"
         return numer_part + denom_part
 
     # TODO: Write tests for this
