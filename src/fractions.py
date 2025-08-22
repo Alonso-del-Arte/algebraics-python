@@ -9,10 +9,12 @@ def euclidean_gcd(a, b) :
 # the Python standard library
 class Fraction :
     
-    # TODO: Refactor constructor to reduce fraction to lowest terms
     def __init__(self, numer, denom) :
-        self.numerator = numer
-        self.denominator = denom
+        gcd = euclidean_gcd(numer, denom)
+        prop_numer = numer // gcd
+        prop_denom = denom // gcd
+        self.numerator = prop_numer
+        self.denominator = prop_denom
     
     def __str__(self) :
         gcd = euclidean_gcd(self.numerator, self.denominator)
