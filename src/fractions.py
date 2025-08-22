@@ -12,7 +12,10 @@ class Fraction :
         self.denominator = denom
     
     def __str__(self) :
-        return str(self.numerator) + "/" + str(self.denominator)
+        gcd = euclidean_gcd(self.numerator, self.denominator)
+        prop_numer = self.numerator // gcd
+        prop_denom = self.denominator // gcd
+        return str(prop_numer) + "/" + str(prop_denom)
 
     # TODO: Write tests for this
     def HTML_str(self) :
