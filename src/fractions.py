@@ -29,7 +29,9 @@ class Fraction :
     
     # TODO: Write tests for this
     def TeX_str(self) :
-        return "SORRY, NOT IMPLEMENTED YET"
+        numer_part = "\\frac{" + str(self.numerator)
+        denom_part = "}{" + str(self.denominator) + "}"
+        return numer_part + denom_part
 
     # TODO: Write tests for this
     def __add__(self, addend) :
