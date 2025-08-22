@@ -35,6 +35,13 @@ class FractionTest(unittest.TestCase) :
         actual = instance.numerator
         self.assertEqual(expected, actual)
     
+    def test_constructor_sets_denominator(self) :
+        numer = random.randrange(1, 1024)
+        expected = 2 * numer + 1
+        instance = src.fractions.Fraction(numer, expected)
+        actual = instance.denominator
+        self.assertEqual(expected, actual)
+    
     def test_str(self) :
         numer = random.randrange(1, 32767)
         denom = numer + 1
