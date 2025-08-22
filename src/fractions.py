@@ -5,6 +5,8 @@ def euclidean_gcd(a, b) :
         a = tempB
     return abs(a)
 
+# TODO: Assess whether this class is even necessary, given the Fraction class in 
+# the Python standard library
 class Fraction :
     
     # TODO: Refactor constructor to reduce fraction to lowest terms
