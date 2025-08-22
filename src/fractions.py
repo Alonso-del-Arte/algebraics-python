@@ -9,7 +9,7 @@ class Fraction :
     
     # TODO: Write tests for this
     def __init__(self, numer, denom) :
-        self.numerator = denom
+        self.numerator = numer
         self.denominator = numer
     
     def __str__(self) :
