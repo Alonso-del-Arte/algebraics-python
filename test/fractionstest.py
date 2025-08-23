@@ -5,6 +5,12 @@ import src.fractions
 
 class FractionTest(unittest.TestCase) :
     
+    SOME_PRIMES = [277, 281, 283, 293, 307, 311, 313, 317, 331, 337, 347, 349, 
+                   353, 359, 367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 
+                   431, 433, 439, 443, 449]
+    
+    NUMBER_OF_PRIMES = len(SOME_PRIMES)
+    
     def test_euclidean_gcd_same_number(self) :
         expected = random.randrange(1, 32767)
         actual = src.fractions.euclidean_gcd(expected, expected)
@@ -128,6 +134,18 @@ class FractionTest(unittest.TestCase) :
         instance = src.fractions.Fraction(show_numer, show_denom)
         actual = instance.denominator
         message = "Fraction is " + str(numer) + "/" + str(expected)
+        self.assertEqual(expected, actual, message)
+        
+    def test_add_same_denominator(self) :
+        index = random.randrange(0, self.NUMBER_OF_PRIMES - 1)
+        denom = self.SOME_PRIMES[index]
+        numerA = random.randrange(1, denom - 1)
+        numerB = random.randrange(1, denom - numerA - 1)
+        addendA = src.fractions.Fraction(numerA, denom)
+        addendB = src.fractions.Fraction(numerB, denom)
+        expected = src.fractions.Fraction(numerA + numerB, denom)
+        actual = addendA + addendB
+        message = "Adding up " + addendA.__str__() + " and " + addendB.__str__()
         self.assertEqual(expected, actual, message)
     
 if __name__ == '__main__' :
