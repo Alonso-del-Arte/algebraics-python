@@ -108,7 +108,7 @@ class FractionTest(unittest.TestCase) :
 
     def test_constructor_sets_numerator_from_not_lowest_terms(self) :
         expected = random.randrange(1, 1024)
-        denom = 3 * expected + 2
+        denom = 3 * expected + 1 + (expected % 2)
         power = 5 ** random.randrange(2, 10)
         multiplier = power * expected * denom
         show_numer = multiplier * expected
@@ -120,7 +120,7 @@ class FractionTest(unittest.TestCase) :
     
     def test_constructor_sets_denominator_from_not_lowest_terms(self) :
         numer = random.randrange(1, 1024)
-        expected = 5 * numer + 1
+        expected = 5 * numer + 1 + (numer % 2)
         power = 3 ** random.randrange(2, 12)
         multiplier = power * numer * expected
         show_numer = multiplier * numer
