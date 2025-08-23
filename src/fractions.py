@@ -13,8 +13,8 @@ class Fraction :
         gcd = euclidean_gcd(numer, denom)
         prop_numer = numer // gcd
         prop_denom = denom // gcd
-        self.numerator = 1 # prop_numer
-        self.denominator = 2 # prop_denom
+        self.numerator = prop_numer
+        self.denominator = prop_denom
     
     def __str__(self) :
         gcd = euclidean_gcd(self.numerator, self.denominator)
