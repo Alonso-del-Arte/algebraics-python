@@ -17,26 +17,17 @@ class Fraction :
         self.denominator = prop_denom
     
     def __str__(self) :
-        gcd = euclidean_gcd(self.numerator, self.denominator)
-        prop_numer = self.numerator // gcd
-        prop_denom = self.denominator // gcd
-        return str(prop_numer) + "/" + str(prop_denom)
+        return str(self.numerator) + "/" + str(self.denominator)
 
     def HTML_str(self) :
-        gcd = euclidean_gcd(self.numerator, self.denominator)
-        prop_numer = self.numerator // gcd
-        prop_denom = self.denominator // gcd
-        numer_part = "<sup>" + str(prop_numer)
+        numer_part = "<sup>" + str(self.numerator)
         middle_part = "</sup>&frasl;<sub>"
-        denom_part = str(prop_denom) + "</sub>"
+        denom_part = str(self.denominator) + "</sub>"
         return numer_part + middle_part + denom_part
     
     def TeX_str(self) :
-        gcd = euclidean_gcd(self.numerator, self.denominator)
-        prop_numer = self.numerator // gcd
-        prop_denom = self.denominator // gcd
-        numer_part = "\\frac{" + str(prop_numer)
-        denom_part = "}{" + str(prop_denom) + "}"
+        numer_part = "\\frac{" + str(self.numerator)
+        denom_part = "}{" + str(self.denominator) + "}"
         return numer_part + denom_part
 
     # TODO: Write tests for this
