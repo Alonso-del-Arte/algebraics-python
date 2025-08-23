@@ -47,5 +47,5 @@ class Fraction :
         return self
 
     # TODO: Write tests for this
-    def __floordiv__(self, divisor) :
+    def __truediv__(self, divisor) :
         return self
