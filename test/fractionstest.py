@@ -135,6 +135,15 @@ class FractionTest(unittest.TestCase) :
         actual = instance.denominator
         message = "Fraction is " + str(numer) + "/" + str(expected)
         self.assertEqual(expected, actual, message)
+    
+    def test_not_equal_diff_numer(self) :
+        numerA = random.randrange(1, 512)
+        numerB = numerA + random.randrange(1, 511)
+        denom = random.randrange(1, 1024)
+        fractionA = src.fractions.Fraction(numerA, denom)
+        fractionB = src.fractions.Fraction(numerB, denom)
+        message = str(fractionA) + " should not equal " + str(fractionB)
+        self.assertNotEqual(fractionA, fractionB, message)
         
     @unittest.skip("Need to override __eq__() first")
     def test_add_same_denominator(self) :
