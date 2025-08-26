@@ -30,9 +30,8 @@ class Fraction :
         denom_part = "}{" + str(self.denominator) + "}"
         return numer_part + denom_part
 
-    # TODO: Write tests for this
     def __eq__(self, other) :
-        return False
+        return self.numerator == other.numerator
     
     # TODO: Write tests for this
     def __add__(self, addend) :
