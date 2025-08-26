@@ -34,9 +34,16 @@ class Fraction :
         match_numer = self.numerator == other.numerator
         return match_numer and self.denominator == other.denominator
     
-    # TODO: Write tests for this
     def __add__(self, addend) :
-        return Fraction(self.numerator + addend.numerator, self.denominator)
+        if self.denominator == addend.denominator :
+            numer = self.numerator + addend.numerator
+            return Fraction(numer, self.denominator)
+        else :
+            cross_multA = self.numerator * addend.denominator
+            cross_multB = addend.numerator * self.denominator
+            numer = cross_multA + cross_multB
+            denom = self.denominator * addend.denominator
+            return Fraction(numer, denom)
 
     # TODO: Write tests for this
     def __neg__(self, divisor) :
