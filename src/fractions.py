@@ -31,7 +31,8 @@ class Fraction :
         return numer_part + denom_part
 
     def __eq__(self, other) :
-        return self.numerator == other.numerator
+        match_numer = self.numerator == other.numerator
+        return match_numer and self.denominator == other.denominator
     
     # TODO: Write tests for this
     def __add__(self, addend) :
