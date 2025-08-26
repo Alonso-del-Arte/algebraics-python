@@ -176,5 +176,20 @@ class FractionTest(unittest.TestCase) :
         message = msgPart + " expected " + str(expected) + " got " + str(actual)
         self.assertEqual(expected, actual, message)
     
+    def test_add(self) :
+        addendA_numer = random.randrange(1, 128)
+        addendB_numer = random.randrange(1, 128)
+        addendA_denom = random.randrange(2, 128)
+        addendB_denom = random.randrange(129, 256)
+        addendA = src.fractions.Fraction(addendA_numer, addendA_denom)
+        addendB = src.fractions.Fraction(addendB_numer, addendB_denom)
+        exp_num = addendA_numer * addendB_denom + addendB_numer * addendA_denom
+        exp_den = addendA_denom * addendB_denom
+        expected = src.fractions.Fraction(exp_num, exp_den)
+        actual = addendA + addendB
+        msgPart = "Adding up " + addendA.__str__() + " and " + addendB.__str__()
+        message = msgPart + " expected " + str(expected) + " got " + str(actual)
+        self.assertEqual(expected, actual, message)
+    
 if __name__ == '__main__' :
     unittest.main()
