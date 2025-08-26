@@ -172,7 +172,8 @@ class FractionTest(unittest.TestCase) :
         addendB = src.fractions.Fraction(numerB, denom)
         expected = src.fractions.Fraction(numerA + numerB, denom)
         actual = addendA + addendB
-        message = "Adding up " + addendA.__str__() + " and " + addendB.__str__()
+        msgPart = "Adding up " + addendA.__str__() + " and " + addendB.__str__()
+        message = msgPart + " expected " + str(expected) + " got " + str(actual)
         self.assertEqual(expected, actual, message)
     
 if __name__ == '__main__' :
