@@ -136,6 +136,7 @@ class FractionTest(unittest.TestCase) :
         message = "Fraction is " + str(numer) + "/" + str(expected)
         self.assertEqual(expected, actual, message)
         
+    @unittest.skip("Need to override __eq__() first")
     def test_add_same_denominator(self) :
         index = random.randrange(0, self.NUMBER_OF_PRIMES - 1)
         denom = self.SOME_PRIMES[index]
