@@ -238,5 +238,11 @@ class FractionTest(unittest.TestCase) :
         message = str(instance) + " negated should be " + str(expected)
         self.assertEqual(expected, actual, message)
     
+    def test_negate_zero(self) :
+        expected = src.fractions.Fraction(0, 1)
+        actual = -expected
+        message = str(expected) + " negated should be that, got " + str(actual)
+        self.assertEqual(expected, actual, message)
+    
 if __name__ == '__main__' :
     unittest.main()
