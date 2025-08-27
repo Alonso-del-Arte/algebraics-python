@@ -45,9 +45,16 @@ class Fraction :
     def __neg__(self, divisor) :
         return self
 
-    # TODO: Write tests for this
     def __sub__(self, subtrahend) :
-        return Fraction(self.numerator - subtrahend.numerator, self.denominator)
+        if self.denominator == subtrahend.denominator :
+            numer = self.numerator - subtrahend.numerator
+            return Fraction(numer, self.denominator)
+        else :
+            cross_multA = self.numerator * subtrahend.denominator
+            cross_multB = subtrahend.numerator * self.denominator
+            numer = cross_multA - cross_multB
+            denom = self.denominator * subtrahend.denominator
+            return Fraction(numer, denom)
 
     # TODO: Write tests for this
     def __mul__(self, multiplicand) :
