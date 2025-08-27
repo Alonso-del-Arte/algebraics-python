@@ -42,8 +42,6 @@ class Fraction :
         return Fraction(numer, denom)
 
     def __neg__(self) :
-        if self.numerator == 0 :
-            return self
         return Fraction(-self.numerator, self.denominator)
 
     def __sub__(self, subtrahend) :
