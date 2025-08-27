@@ -22,6 +22,8 @@ class Fraction :
         return str(self.numerator) + "/" + str(self.denominator)
 
     def HTML_str(self) :
+        if self.denominator == 1 :
+            return str(self.numerator)
         numer_part = "<sup>" + str(self.numerator)
         middle_part = "</sup>&frasl;<sub>"
         denom_part = str(self.denominator) + "</sub>"
