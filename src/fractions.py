@@ -43,7 +43,7 @@ class Fraction :
 
     def __neg__(self) :
         if self.numerator == 0 :
-            return Fraction(1, 2)
+            return self
         return Fraction(-self.numerator, self.denominator)
 
     def __sub__(self, subtrahend) :
