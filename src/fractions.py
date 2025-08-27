@@ -42,7 +42,7 @@ class Fraction :
         return Fraction(numer, denom)
 
     # TODO: Write tests for this
-    def __neg__(self, divisor) :
+    def __neg__(self) :
         return self
 
     def __sub__(self, subtrahend) :
