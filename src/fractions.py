@@ -43,7 +43,7 @@ class Fraction :
 
     # TODO: Write tests for this
     def __neg__(self) :
-        return self
+        return Fraction(-abs(self.numerator), self.denominator)
 
     def __sub__(self, subtrahend) :
         cross_multA = self.numerator * subtrahend.denominator
