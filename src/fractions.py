@@ -10,11 +10,11 @@ def euclidean_gcd(a, b) :
 class Fraction :
     
     def __init__(self, numer, denom) :
-        # gcd = euclidean_gcd(numer, denom)
-        # prop_numer = numer // gcd
-        # prop_denom = denom // gcd
-        self.numerator = numer # prop_numer
-        self.denominator = denom # prop_denom
+        gcd = euclidean_gcd(numer, denom)
+        prop_numer = numer // gcd
+        prop_denom = denom // gcd
+        self.numerator = prop_numer
+        self.denominator = prop_denom
     
     def __str__(self) :
         if self.denominator == 1 :
