@@ -19,6 +19,9 @@ class Fraction :
     def __str__(self) :
         if self.denominator == 1 :
             return str(self.numerator)
+        if self.numerator < 0 :
+            abs_display = str(abs(self.numerator))
+            return "\u2212" + abs_display + "/" + str(self.denominator)
         return str(self.numerator) + "/" + str(self.denominator)
 
     def HTML_str(self) :
