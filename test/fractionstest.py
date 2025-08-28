@@ -126,6 +126,13 @@ class FractionTest(unittest.TestCase) :
         actual = instance.HTML_str()
         self.assertEqual(expected, actual)
 
+    def test_TeX_str_positive_integer(self) :
+        numer = random.randrange(1, 4096)
+        instance = src.fractions.Fraction(numer, 1)
+        expected = str(numer)
+        actual = instance.TeX_str()
+        self.assertEqual(expected, actual)
+
     def test_constructor_sets_numerator_from_not_lowest_terms(self) :
         expected = random.randrange(1, 1024)
         denom = 3 * expected + 1 + (expected % 2)
