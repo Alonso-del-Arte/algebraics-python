@@ -36,7 +36,7 @@ class Fraction :
         if self.denominator == 1 :
             return str(self.numerator)
         if self.numerator < 0 :
-            return "REWIND TO FAILING"
+            return "\\frac{" + str(self.numerator) + "}{" + str(self.denominator) + "}"
         numer_part = "\\frac{" + str(self.numerator)
         denom_part = "}{" + str(self.denominator) + "}"
         return numer_part + denom_part
