@@ -35,6 +35,8 @@ class Fraction :
     def TeX_str(self) :
         if self.denominator == 1 :
             return str(self.numerator)
+        if self.numerator < 0 :
+            return "REWIND TO FAILING"
         numer_part = "\\frac{" + str(self.numerator)
         denom_part = "}{" + str(self.denominator) + "}"
         return numer_part + denom_part
