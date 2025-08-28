@@ -27,6 +27,11 @@ class Fraction :
     def HTML_str(self) :
         if self.denominator == 1 :
             return str(self.numerator)
+        if self.numerator < 0 :
+            numer_part = "<sup>&minus;" + str(abs(self.numerator))
+            middle_part = "</sup>&frasl;<sub>"
+            denom_part = str(self.denominator) + "</sub>"
+            return numer_part + middle_part + denom_part
         numer_part = "<sup>" + str(self.numerator)
         middle_part = "</sup>&frasl;<sub>"
         denom_part = str(self.denominator) + "</sub>"
