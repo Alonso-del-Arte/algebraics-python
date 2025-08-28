@@ -30,6 +30,8 @@ class Fraction :
         return numer_part + middle_part + denom_part
     
     def TeX_str(self) :
+        if self.denominator == 1 :
+            return str(self.numerator)
         numer_part = "\\frac{" + str(self.numerator)
         denom_part = "}{" + str(self.denominator) + "}"
         return numer_part + denom_part
