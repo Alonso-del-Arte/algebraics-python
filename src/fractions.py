@@ -28,7 +28,7 @@ class Fraction :
         if self.denominator == 1 :
             return str(self.numerator)
         if self.numerator < 0 :
-            numer_part = "<sup>&minus;" + str(abs(self.numerator))
+            numer_part = "&minus;<sup>" + str(abs(self.numerator))
             middle_part = "</sup>&frasl;<sub>"
             denom_part = str(self.denominator) + "</sub>"
             return numer_part + middle_part + denom_part
