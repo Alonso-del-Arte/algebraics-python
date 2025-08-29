@@ -152,10 +152,10 @@ class FractionTest(unittest.TestCase) :
         self.assertEqual(expected, actual)
     
     def test_TeX_str_negative(self) :
-        numer = -random.randrange(1, 32767)
-        denom = -numer + 1
-        instance = src.fractions.Fraction(numer, denom)
-        expected = "\\frac{" + str(numer) + "}{" + str(denom) + "}"
+        numer = random.randrange(1, 32767)
+        denom = numer + 1
+        instance = src.fractions.Fraction(-numer, denom)
+        expected = "-\\frac{" + str(numer) + "}{" + str(denom) + "}"
         actual = instance.TeX_str()
         self.assertEqual(expected, actual)
     
