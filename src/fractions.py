@@ -44,7 +44,7 @@ class Fraction :
     def TeX_str(self) :
         if self.denominator == 1 :
             if self.numerator < 0 :
-                return "REWIND TO FAILING"
+                return str(self.numerator)
             return str(self.numerator)
         if self.numerator < 0 :
             numer_str = str(-self.numerator)
