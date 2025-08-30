@@ -166,6 +166,13 @@ class FractionTest(unittest.TestCase) :
         actual = instance.__str__()
         self.assertEqual(expected, actual)
     
+    def test_HTML_str_negative_integer(self) :
+        numer = random.randrange(1, 32767)
+        instance = src.fractions.Fraction(-numer, 1)
+        expected = "&minus;" + str(numer)
+        actual = instance.HTML_str()
+        self.assertEqual(expected, actual)
+    
     def test_constructor_sets_numerator_from_not_lowest_terms(self) :
         expected = random.randrange(1, 1024)
         denom = 3 * expected + 1 + (expected % 2)
