@@ -18,6 +18,8 @@ class Fraction :
     
     def __str__(self) :
         if self.denominator == 1 :
+            if self.numerator < 0 :
+                return "\u2212" + str(-self.numerator)
             return str(self.numerator)
         if self.numerator < 0 :
             abs_display = str(abs(self.numerator))
