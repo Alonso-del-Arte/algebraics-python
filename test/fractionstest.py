@@ -322,6 +322,21 @@ class FractionTest(unittest.TestCase) :
         message = str(expected) + " negated should be that, got " + str(actual)
         self.assertEqual(expected, actual, message)
     
+    def test_mul(self) :
+        numerA = random.randrange(1, 65535)
+        denomA = random.randrange(2, 65536)
+        multiplicandA = src.fractions.Fraction(numerA, denomA)
+        numerB = random.randrange(1, 65535)
+        denomB = random.randrange(2, 65536)
+        multiplicandB = src.fractions.Fraction(numerB, denomB)
+        exp_numer = numerA * numerB
+        exp_denom = denomA * denomB
+        expected = src.fractions.Fraction(exp_numer, exp_denom)
+        actual = multiplicandA * multiplicandB
+        msgPart = str(multiplicandA) + " times " + str(multiplicandB)
+        message = msgPart + " should be " + str(expected)
+        self.assertEqual(expected, actual, message)
+    
     def test_is_integer(self) :
         numer = random.randrange(-32768, 32767)
         instance = src.fractions.Fraction(numer, 1)
