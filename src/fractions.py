@@ -84,6 +84,5 @@ class Fraction :
     def __truediv__(self, divisor) :
         return self
 
-    # TODO: Write tests for this
     def is_integer(self) :
-        return True
+        return self.denominator == 1
