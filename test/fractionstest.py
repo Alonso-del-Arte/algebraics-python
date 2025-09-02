@@ -352,6 +352,16 @@ class FractionTest(unittest.TestCase) :
         message = msgPart + " should be " + str(expected)
         self.assertEqual(expected, actual, message)
     
+    def test_reciprocal(self) :
+        numer = random.randrange(1, 32767)
+        denom = random.randrange(2, 32768)
+        instance = src.fractions.Fraction(numer, denom)
+        expected = src.fractions.Fraction(denom, numer)
+        actual = instance.reciprocal()
+        msgPart = "Reciprocal of " + str(instance) + " is " + str(expected)
+        message = msgPart + ", got " + str(actual)
+        self.assertEqual(expected, actual, message)
+    
     def test_is_integer(self) :
         numer = random.randrange(-32768, 32767)
         instance = src.fractions.Fraction(numer, 1)
