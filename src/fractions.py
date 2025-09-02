@@ -73,9 +73,9 @@ class Fraction :
         denom = self.denominator * multiplicand.denominator
         return Fraction(numer, denom)
 
-    # TODO: Write tests for this
+    # TODO: Write test for reciprocal of zero
     def reciprocal(self) :
-        return self
+        return Fraction(self.denominator, self.numerator)
 
     # TODO: Write test for division by zero
     def __truediv__(self, divisor) :
