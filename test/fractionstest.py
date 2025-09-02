@@ -337,6 +337,21 @@ class FractionTest(unittest.TestCase) :
         message = msgPart + " should be " + str(expected)
         self.assertEqual(expected, actual, message)
     
+    def test_truediv(self) :
+        numerA = random.randrange(1, 65535)
+        denomA = random.randrange(2, 65536)
+        dividend = src.fractions.Fraction(numerA, denomA)
+        numerB = random.randrange(1, 65535)
+        denomB = random.randrange(2, 65536)
+        divisor = src.fractions.Fraction(numerB, denomB)
+        exp_numer = numerA * denomB
+        exp_denom = denomA * numerB
+        expected = src.fractions.Fraction(exp_numer, exp_denom)
+        actual = dividend / divisor
+        msgPart = str(dividend) + " divided by " + str(divisor)
+        message = msgPart + " should be " + str(expected)
+        self.assertEqual(expected, actual, message)
+    
     def test_is_integer(self) :
         numer = random.randrange(-32768, 32767)
         instance = src.fractions.Fraction(numer, 1)
