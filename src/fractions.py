@@ -68,9 +68,10 @@ class Fraction :
     def __sub__(self, subtrahend) :
         return self + (-subtrahend)
 
-    # TODO: Write tests for this
     def __mul__(self, multiplicand) :
-        return self
+        numer = self.numerator * multiplicand.numerator
+        denom = self.denominator * multiplicand.denominator
+        return Fraction(numer, denom)
 
     # TODO: Write tests for this
     def reciprocal(self) :
