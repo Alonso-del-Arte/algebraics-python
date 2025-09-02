@@ -83,3 +83,8 @@ class Fraction :
     # TODO: Write tests for this
     def __truediv__(self, divisor) :
         return self
+
+    # TODO: Write tests for this
+    def is_integer(self) :
+        return False
+    
