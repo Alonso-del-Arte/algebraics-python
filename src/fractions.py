@@ -66,11 +66,7 @@ class Fraction :
         return Fraction(-self.numerator, self.denominator)
 
     def __sub__(self, subtrahend) :
-        cross_multA = self.numerator * subtrahend.denominator
-        cross_multB = subtrahend.numerator * self.denominator
-        numer = cross_multA - cross_multB
-        denom = self.denominator * subtrahend.denominator
-        return Fraction(numer, denom)
+        return self + (-subtrahend)
 
     # TODO: Write tests for this
     def __mul__(self, multiplicand) :
