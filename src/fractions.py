@@ -79,9 +79,7 @@ class Fraction :
 
     # TODO: Write test for division by zero
     def __truediv__(self, divisor) :
-        numer = self.numerator * divisor.denominator
-        denom = self.denominator * divisor.numerator
-        return Fraction(numer, denom)
+        return self * divisor.reciprocal()
 
     def is_integer(self) :
         return self.denominator == 1
