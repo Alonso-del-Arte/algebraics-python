@@ -36,9 +36,8 @@ class AlgebraicInteger :
     def abs(self) :
         return abs(self.num)
     
-    # TODO: Write tests for this
     def __add__(self, addend) :
-        return self
+        return AlgebraicInteger(self.num + addend.num)
 
     # TODO: Write tests for this
     def __sub__(self, subtrahend) :
