@@ -30,9 +30,8 @@ class AlgebraicInteger :
     def trace(self) :
         return self.num
 
-    # TODO: Write tests for this
     def norm(self) :
-        return -5
+        return self.num
 
     def abs(self) :
         return abs(self.num)
