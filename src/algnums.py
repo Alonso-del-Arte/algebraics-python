@@ -17,7 +17,7 @@ class AlgebraicInteger :
         return self.__str__()
     
     def __eq__(self, other) :
-        return True
+        return self.num == other.num
 
     def ring(self) :
         return IntegerRing()
