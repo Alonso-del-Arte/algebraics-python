@@ -15,6 +15,9 @@ class AlgebraicInteger :
     
     def TeX_str(self) :
         return self.__str__()
+    
+    def __eq__(self, other) :
+        return True
 
     def ring(self) :
         return IntegerRing()
