@@ -27,9 +27,8 @@ class AlgebraicInteger :
             return 0
         return 1
 
-    # TODO: Write tests for this
     def trace(self) :
-        return -3
+        return self.num
 
     # TODO: Write tests for this
     def norm(self) :
