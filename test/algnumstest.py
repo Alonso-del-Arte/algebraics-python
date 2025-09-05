@@ -33,6 +33,14 @@ class AlgebraicIntegerTest(unittest.TestCase) :
         expected = str(n)
         actual = instance.TeX_str()
         self.assertEqual(expected, actual)
+    
+    def test_eq(self) :
+        n = random.randrange(-32768, 32767)
+        some_integer = AlgebraicInteger(n)
+        same_integer = AlgebraicInteger(n)
+        num_str = str(n)
+        message = num_str + " should equal " + num_str
+        self.assertEqual(some_integer, same_integer, message)
         
     def test_ring(self) :
         n = random.randrange(-32768, 32767)
