@@ -78,6 +78,12 @@ class AlgebraicIntegerTest(unittest.TestCase) :
         actual = instance.trace()
         self.assertEqual(expected, actual)
         
+    def test_norm(self) :
+        expected = random.randrange(-65536, 65535)
+        instance = AlgebraicInteger(expected)
+        actual = instance.norm()
+        self.assertEqual(expected, actual)
+        
     def test_abs_already_positive(self) :
         expected = random.randrange(1, 65536)
         instance = AlgebraicInteger(expected)
