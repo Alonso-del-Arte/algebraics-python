@@ -41,6 +41,14 @@ class AlgebraicIntegerTest(unittest.TestCase) :
         num_str = str(n)
         message = num_str + " should equal " + num_str
         self.assertEqual(some_integer, same_integer, message)
+    
+    def test_not_equal(self) :
+        nA = random.randrange(-32768, 32767)
+        nB = nA + random.randrange(1, 32768) + 1
+        some_integer = AlgebraicInteger(nA)
+        other_integer = AlgebraicInteger(nB)
+        message = str(nA) + " should not equal " + str(nB)
+        self.assertNotEqual(some_integer, other_integer, message)
         
     def test_ring(self) :
         n = random.randrange(-32768, 32767)
