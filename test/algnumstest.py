@@ -96,6 +96,18 @@ class AlgebraicIntegerTest(unittest.TestCase) :
         expected = abs(n)
         actual = instance.abs()
         self.assertEqual(expected, actual)
+    
+    def test_add(self) :
+        nA = random.randrange(-65536, 65535)
+        nB = random.randrange(-65536, 65535)
+        addendA = AlgebraicInteger(nA)
+        addendB = AlgebraicInteger(nB)
+        addition = nA + nB
+        expected = AlgebraicInteger(addition)
+        actual = addendA + addendB
+        msgPart = "Adding up " + str(nA) + " and " + str(nB)
+        message = msgPart + " expected " + str(addition) + " got " + str(actual)
+        self.assertEqual(expected, actual, message)
 
 if __name__ == '__main__' :
     unittest.main()
