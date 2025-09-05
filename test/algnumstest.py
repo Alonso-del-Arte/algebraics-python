@@ -109,5 +109,17 @@ class AlgebraicIntegerTest(unittest.TestCase) :
         message = msgPart + " expected " + str(addition) + " got " + str(actual)
         self.assertEqual(expected, actual, message)
 
+    def test_sub(self) :
+        nA = random.randrange(-65536, 65535)
+        nB = random.randrange(-65536, 65535)
+        minuend = AlgebraicInteger(nA)
+        subtrahend = AlgebraicInteger(nB)
+        subtraction = nA - nB
+        expected = AlgebraicInteger(subtraction)
+        actual = minuend - subtrahend
+        msgPart = "Subtracting " + str(nB) + " from " + str(nA)
+        message = msgPart + " exp. " + str(subtraction) + " got " + str(actual)
+        self.assertEqual(expected, actual, message)
+
 if __name__ == '__main__' :
     unittest.main()
