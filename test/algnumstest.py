@@ -120,6 +120,16 @@ class AlgebraicIntegerTest(unittest.TestCase) :
         msgPart = "Subtracting " + str(nB) + " from " + str(nA)
         message = msgPart + " exp. " + str(subtraction) + " got " + str(actual)
         self.assertEqual(expected, actual, message)
+    
+    def test_neg(self) :
+        n = random.randrange(1, 1048576)
+        negatedN = -n
+        instance = AlgebraicInteger(n)
+        expected = AlgebraicInteger(negatedN)
+        actual = -instance
+        msgPart = str(n) + " negated should be " + str(negatedN)
+        message = msgPart + ", got " + str(actual)
+        self.assertEqual(expected, actual, message)
 
 if __name__ == '__main__' :
     unittest.main()
