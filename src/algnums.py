@@ -44,7 +44,7 @@ class AlgebraicInteger :
 
     # TODO: Write tests for this
     def __neg__(self) :
-        return self
+        return AlgebraicInteger(-abs(self.num))
 
     # TODO: Write tests for this
     def __mul__(self, multiplicand) :
