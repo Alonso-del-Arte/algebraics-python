@@ -140,6 +140,18 @@ class AlgebraicIntegerTest(unittest.TestCase) :
         msgPart = str(n) + " negated should be " + str(negatedN)
         message = msgPart + ", got " + str(actual)
         self.assertEqual(expected, actual, message)
+    
+    def test_negate_zero(self) :
+        expected = AlgebraicInteger(0)
+        actual = -expected
+        message = "Expected 0, got " + str(actual)
+        self.assertEqual(expected, actual, message)
 
+    # TODO: Test for __mul__()
+    
+    # TODO: Tests for __floordiv__(), __truediv__()
+    
+    # TODO: Tests for division by zero
+        
 if __name__ == '__main__' :
     unittest.main()
