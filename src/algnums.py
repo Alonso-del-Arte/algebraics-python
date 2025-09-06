@@ -44,7 +44,7 @@ class AlgebraicInteger :
 
     def __neg__(self) :
         if self.num == 0 :
-            return -1
+            return AlgebraicInteger(-1)
         return AlgebraicInteger(-self.num)
 
     # TODO: Write tests for this
