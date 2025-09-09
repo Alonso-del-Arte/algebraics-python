@@ -23,7 +23,7 @@ class AlgebraicIntegerTest(unittest.TestCase) :
     def test_HTML_str(self) :
         n = random.randrange(1, 32768)
         instance = AlgebraicInteger(-n)
-        expected = "&minus;" + str(n)
+        expected = f"&minus;{n}"
         actual = instance.HTML_str()
         self.assertEqual(expected, actual)
         
@@ -47,7 +47,7 @@ class AlgebraicIntegerTest(unittest.TestCase) :
         nB = nA + random.randrange(1, 32768) + 1
         some_integer = AlgebraicInteger(nA)
         other_integer = AlgebraicInteger(nB)
-        message = str(nA) + " should not equal " + str(nB)
+        message = f"{nA} should not equal {nB}"
         self.assertNotEqual(some_integer, other_integer, message)
         
     def test_ring(self) :
@@ -105,8 +105,7 @@ class AlgebraicIntegerTest(unittest.TestCase) :
         addition = nA + nB
         expected = AlgebraicInteger(addition)
         actual = addendA + addendB
-        msgPart = "Adding up " + str(nA) + " and " + str(nB)
-        message = msgPart + " expected " + str(addition) + " got " + str(actual)
+        message = f"Adding up {nA} and {nB}, expected {addition}, got {actual}"
         self.assertEqual(expected, actual, message)
 
     def test_sub(self) :
@@ -117,8 +116,7 @@ class AlgebraicIntegerTest(unittest.TestCase) :
         subtraction = nA - nB
         expected = AlgebraicInteger(subtraction)
         actual = minuend - subtrahend
-        msgPart = "Subtracting " + str(nB) + " from " + str(nA)
-        message = msgPart + " exp. " + str(subtraction) + " got " + str(actual)
+        message = f"Subtract {nB} from {nA} expected {subtraction} got {actual}"
         self.assertEqual(expected, actual, message)
     
     def test_neg(self) :
