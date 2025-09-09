@@ -53,6 +53,10 @@ class AlgebraicInteger :
         return self
 
     # TODO: Write tests for this
+    def __truediv__(self, divisor) :
+        return self
+
+    # TODO: Write tests for this
     def __mod__(self, divisor) :
         return self
 
