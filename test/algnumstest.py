@@ -125,8 +125,7 @@ class AlgebraicIntegerTest(unittest.TestCase) :
         instance = AlgebraicInteger(n)
         expected = AlgebraicInteger(negatedN)
         actual = -instance
-        msgPart = str(n) + " negated should be " + str(negatedN)
-        message = msgPart + ", got " + str(actual)
+        message = f"{n} negated should be {negatedN}, got {actual}"
         self.assertEqual(expected, actual, message)
 
     def test_negate_negative(self) :
@@ -135,14 +134,13 @@ class AlgebraicIntegerTest(unittest.TestCase) :
         instance = AlgebraicInteger(n)
         expected = AlgebraicInteger(negatedN)
         actual = -instance
-        msgPart = str(n) + " negated should be " + str(negatedN)
-        message = msgPart + ", got " + str(actual)
+        message = f"{n} negated should be {negatedN}, got {actual}"
         self.assertEqual(expected, actual, message)
     
     def test_negate_zero(self) :
         expected = AlgebraicInteger(0)
         actual = -expected
-        message = "Expected 0, got " + str(actual)
+        message = f"Expected 0, got {actual}"
         self.assertEqual(expected, actual, message)
 
     # TODO: Test for __mul__()
