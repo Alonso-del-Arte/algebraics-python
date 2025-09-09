@@ -142,9 +142,18 @@ class AlgebraicIntegerTest(unittest.TestCase) :
         actual = -expected
         message = f"Expected 0, got {actual}"
         self.assertEqual(expected, actual, message)
-
-    # TODO: Test for __mul__()
     
+    def test_mul(self) :
+        nA = random.randrange(-128, 127)
+        nB = random.randrange(-128, 127)
+        multiplicandA = AlgebraicInteger(nA)
+        multiplicandB = AlgebraicInteger(nB)
+        product = nA * nB
+        expected = AlgebraicInteger(product)
+        actual = multiplicandA * multiplicandB
+        message = f"{nA} times {nB} should be {product}, got {actual}"
+        self.assertEqual(expected, actual, message)
+
     # TODO: Tests for __floordiv__(), __truediv__()
     
     # TODO: Tests for division by zero
