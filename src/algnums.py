@@ -40,7 +40,7 @@ class AlgebraicInteger :
         return AlgebraicInteger(self.num + addend.num)
 
     def __sub__(self, subtrahend) :
-        return subtrahend # AlgebraicInteger(self.num - subtrahend.num)
+        return AlgebraicInteger(self.num - subtrahend.num)
 
     def __neg__(self) :
         return AlgebraicInteger(-self.num)
