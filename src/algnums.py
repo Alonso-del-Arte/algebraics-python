@@ -43,8 +43,6 @@ class AlgebraicInteger :
         return AlgebraicInteger(self.num - subtrahend.num)
 
     def __neg__(self) :
-        if self.num == 0 :
-            return AlgebraicInteger(0)
         return AlgebraicInteger(-self.num)
 
     # TODO: Write tests for this
