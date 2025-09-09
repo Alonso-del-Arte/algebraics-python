@@ -43,7 +43,7 @@ class AlgebraicInteger :
         return AlgebraicInteger(self.num - subtrahend.num)
 
     def __neg__(self) :
-        return AlgebraicInteger(-self.num)
+        return self # AlgebraicInteger(-self.num)
 
     # TODO: Write tests for this
     def __mul__(self, multiplicand) :
