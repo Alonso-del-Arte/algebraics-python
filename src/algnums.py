@@ -45,9 +45,8 @@ class AlgebraicInteger :
     def __neg__(self) :
         return AlgebraicInteger(-self.num)
 
-    # TODO: Write tests for this
     def __mul__(self, multiplicand) :
-        return self
+        return AlgebraicInteger(self.num * multiplicand.num)
 
     # TODO: Write tests for this
     def __floordiv__(self, divisor) :
