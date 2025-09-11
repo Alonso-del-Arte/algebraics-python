@@ -6,7 +6,7 @@ class AlgebraicInteger :
         self.num = n
         
     def __str__(self) :
-        return str(self.num)
+        return "REWIND TO FAILING" # str(self.num)
     
     def HTML_str(self) :
         if self.num < 0 :
