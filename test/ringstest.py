@@ -1,5 +1,20 @@
+import random
 import unittest
+
+import src.numth
 from src.rings import IntegerRing
+
+def random_squarefree() :
+    attempt = 0
+    while not src.numth.squarefree(attempt) :
+        attempt = random.randrange(1, 8192)
+    return attempt
+
+def random_squarefree_mod_4(m) :
+    attempt = 0
+    while not src.numth.squarefree(attempt) :
+        attempt = 4 * random.randrange(1, 2048) + m
+    return attempt
 
 class MockRing(IntegerRing) :
     
@@ -67,6 +82,11 @@ class TestIntegerRing(unittest.TestCase) :
         actual = instance.discriminant()
         message = "Reckoning discriminant of Z"
         self.assertEqual(actual, expected, message)
+    
+class TestQuadraticRing(unittest.TestCase) :
+    
+    def test_str(self) :
+        self.fail("FINISH WRITING")
         
 if __name__ == '__main__' :
     unittest.main()
