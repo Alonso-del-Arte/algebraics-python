@@ -6,11 +6,24 @@ from src.rings import IntegerRing
 
 class AlgebraicIntegerTest(unittest.TestCase) :
     
-    def test_str(self) :
-        n = random.randrange(-32768, 32767)
+    def test_str_negative(self) :
+        n = random.randrange(1, 32767)
+        instance = AlgebraicInteger(-n)
+        expected = f"\u2212{n}"
+        actual = str(instance)
+        self.assertEqual(expected, actual)
+    
+    def test_str_zero(self) :
+        instance = AlgebraicInteger(0)
+        expected = "0"
+        actual = str(instance)
+        self.assertEqual(expected, actual)
+        
+    def test_str_positive(self) :
+        n = random.randrange(1, 32767)
         instance = AlgebraicInteger(n)
         expected = str(n)
-        actual = instance.__str__()
+        actual = str(instance)
         self.assertEqual(expected, actual)
         
     def test_HTML_str_positive(self) :
