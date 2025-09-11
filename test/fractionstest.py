@@ -14,8 +14,7 @@ class FractionTest(unittest.TestCase) :
     def test_euclidean_gcd_same_number(self) :
         expected = random.randrange(1, 32767)
         actual = src.fractions.euclidean_gcd(expected, expected)
-        num_str = str(expected)
-        msg = "Reckoning gcd(" + num_str + ", " + num_str + ")"
+        msg = f"Reckoning gcd({expected}, {expected})"
         self.assertEqual(expected, actual, msg)
 
     def test_euclidean_gcd_same_negative_number(self) :
@@ -23,7 +22,7 @@ class FractionTest(unittest.TestCase) :
         expected = -a
         actual = src.fractions.euclidean_gcd(a, a)
         num_str = str(a)
-        msg = "Reckoning gcd(" + num_str + ", " + num_str + ")"
+        msg = f"Reckoning gcd({a}, {a})"
         self.assertEqual(expected, actual, msg)
     
     def test_euclidean_gcd(self) :
@@ -31,9 +30,9 @@ class FractionTest(unittest.TestCase) :
         a = 2 * expected
         b = expected * (expected + 2)
         actual = src.fractions.euclidean_gcd(a, b)
-        msg = "Reckoning gcd(" + str(a) + ", " + str(b) + ")"
+        msg = f"Reckoning gcd({a}, {b})"
         self.assertEqual(expected, actual, msg)
-    
+
     def test_constructor_sets_numerator(self) :
         expected = random.randrange(1, 1024)
         denom = 2 * expected + 1
@@ -52,7 +51,7 @@ class FractionTest(unittest.TestCase) :
         numer = random.randrange(1, 32767)
         denom = numer + 1
         instance = src.fractions.Fraction(numer, denom)
-        expected = str(numer) + "/" + str(denom)
+        expected = f"{numer}/{denom}"
         actual = instance.__str__()
         self.assertEqual(expected, actual)
     
@@ -64,7 +63,7 @@ class FractionTest(unittest.TestCase) :
         numer = multiplier * exp_numer
         denom = multiplier * exp_denom
         instance = src.fractions.Fraction(numer, denom)
-        expected = str(exp_numer) + "/" + str(exp_denom)
+        expected = f"{exp_numer}/{exp_denom}"
         actual = instance.__str__()
         self.assertEqual(expected, actual)
 
@@ -72,8 +71,7 @@ class FractionTest(unittest.TestCase) :
         numer = random.randrange(1, 32767)
         denom = numer + 1
         instance = src.fractions.Fraction(numer, denom)
-        middle_part = "</sup>&frasl;<sub>"
-        expected = "<sup>" + str(numer) + middle_part + str(denom) + "</sub>"
+        expected = f"<sup>{numer}</sup>&frasl;<sub>{denom}</sub>"
         actual = instance.HTML_str()
         self.assertEqual(expected, actual)
     
@@ -85,10 +83,7 @@ class FractionTest(unittest.TestCase) :
         numer = multiplier * exp_numer
         denom = multiplier * exp_denom
         instance = src.fractions.Fraction(numer, denom)
-        numer_part = "<sup>" + str(exp_numer)
-        middle_part = "</sup>&frasl;<sub>"
-        denom_part = str(exp_denom) + "</sub>"
-        expected = numer_part + middle_part + denom_part
+        expected = f"<sup>{exp_numer}</sup>&frasl;<sub>{exp_denom}</sub>"
         actual = instance.HTML_str()
         self.assertEqual(expected, actual)
 
@@ -137,7 +132,7 @@ class FractionTest(unittest.TestCase) :
         numer = random.randrange(1, 32767)
         denom = numer + 1
         instance = src.fractions.Fraction(-numer, denom)
-        expected = "\u2212" + str(numer) + "/" + str(denom)
+        expected = f"\u2212{numer}/{denom}"
         actual = instance.__str__()
         self.assertEqual(expected, actual)
     
@@ -145,9 +140,7 @@ class FractionTest(unittest.TestCase) :
         numer = random.randrange(1, 32767)
         denom = numer + 1
         instance = src.fractions.Fraction(-numer, denom)
-        middle_part = "</sup>&frasl;<sub>"
-        numer_str = "&minus;<sup>" + str(numer)
-        expected = numer_str + middle_part + str(denom) + "</sub>"
+        expected = f"&minus;<sup>{numer}</sup>&frasl;<sub>{denom}</sub>"
         actual = instance.HTML_str()
         self.assertEqual(expected, actual)
     
@@ -162,14 +155,14 @@ class FractionTest(unittest.TestCase) :
     def test_str_negative_integer(self) :
         numer = random.randrange(1, 32767)
         instance = src.fractions.Fraction(-numer, 1)
-        expected = "\u2212" + str(numer)
+        expected = f"\u2212{numer}"
         actual = instance.__str__()
         self.assertEqual(expected, actual)
     
     def test_HTML_str_negative_integer(self) :
         numer = random.randrange(1, 32767)
         instance = src.fractions.Fraction(-numer, 1)
-        expected = "&minus;" + str(numer)
+        expected = f"&minus;{numer}"
         actual = instance.HTML_str()
         self.assertEqual(expected, actual)
     
@@ -189,7 +182,7 @@ class FractionTest(unittest.TestCase) :
         show_denom = multiplier * denom
         instance = src.fractions.Fraction(show_numer, show_denom)
         actual = instance.numerator
-        message = "Fraction is " + str(expected) + "/" + str(denom)
+        message = f"Fraction is {expected}/{denom}"
         self.assertEqual(expected, actual, message)
     
     def test_constructor_sets_denominator_from_not_lowest_terms(self) :
@@ -201,7 +194,7 @@ class FractionTest(unittest.TestCase) :
         show_denom = multiplier * expected
         instance = src.fractions.Fraction(show_numer, show_denom)
         actual = instance.denominator
-        message = "Fraction is " + str(numer) + "/" + str(expected)
+        message = f"Fraction is {numer}/{expected}"
         self.assertEqual(expected, actual, message)
     
     def test_not_equal_diff_numer(self) :
