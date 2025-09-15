@@ -345,6 +345,16 @@ class FractionTest(unittest.TestCase) :
         message = msgPart + " should be " + str(expected)
         self.assertEqual(expected, actual, message)
     
+    def test_truediv_by_zero(self) :
+        numer = random.randrange(1, 65535)
+        denom = random.randrange(2, 65536)
+        dividend = src.fractions.Fraction(numer, denom)
+        zero = src.fractions.Fraction(0, 1)
+        zero_div_msg = f"Dividing {dividend} by zero should cause error"
+        with self.assertRaises(ZeroDivisionError, msg = zero_div_msg) :
+            result = dividend / zero
+            print(zero_div_msg, "not given result", result)
+    
     def test_reciprocal(self) :
         numer = random.randrange(1, 32767)
         denom = random.randrange(2, 32768)
