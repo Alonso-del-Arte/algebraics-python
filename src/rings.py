@@ -33,4 +33,7 @@ class IntegerRing :
 class QuadraticRing(IntegerRing) :
 
     def __init__(self, d) :
-        print('PLACEHOLDER 2')
+        self.radicand = d
+    
+    def __str__(self) :
+        return f"Z[\u221A\u2212{-self.radicand}]"
