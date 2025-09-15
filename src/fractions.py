@@ -79,8 +79,6 @@ class Fraction :
         return Fraction(self.denominator, self.numerator)
 
     def __truediv__(self, divisor) :
-        if divisor.numerator == 0 :
-            raise ZeroDivisionError()
         return self * divisor.reciprocal()
 
     def is_integer(self) :
