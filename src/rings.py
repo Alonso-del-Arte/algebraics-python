@@ -36,4 +36,6 @@ class QuadraticRing(IntegerRing) :
         self.radicand = d
     
     def __str__(self) :
+        if self.radicand > 0 :
+            return f"Z[\u221A{self.radicand}]"
         return f"Z[\u221A\u2212{-self.radicand}]"
