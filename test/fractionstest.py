@@ -365,6 +365,13 @@ class FractionTest(unittest.TestCase) :
         message = msgPart + ", got " + str(actual)
         self.assertEqual(expected, actual, message)
     
+    def test_reciprocal_of_zero(self) :
+        zero = src.fractions.Fraction(0, 1)
+        zero_recip_msg = "Reciprocal of zero should cause error"
+        with self.assertRaises(ZeroDivisionError, msg = zero_recip_msg) :
+            recip = zero.reciprocal()
+            print("Reciprocal of zero is said to be ", recip)
+    
     def test_is_integer(self) :
         numer = random.randrange(-32768, 32767)
         instance = src.fractions.Fraction(numer, 1)
