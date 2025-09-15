@@ -77,8 +77,9 @@ class Fraction :
     def reciprocal(self) :
         return Fraction(self.denominator, self.numerator)
 
-    # TODO: Write test for division by zero
     def __truediv__(self, divisor) :
+        if divisor.numerator == 0 :
+            raise ZeroDivisionError()
         return self * divisor.reciprocal()
 
     def is_integer(self) :
