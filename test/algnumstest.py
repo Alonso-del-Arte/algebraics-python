@@ -166,8 +166,30 @@ class AlgebraicIntegerTest(unittest.TestCase) :
         actual = multiplicandA * multiplicandB
         message = f"{nA} times {nB} should be {product}, got {actual}"
         self.assertEqual(expected, actual, message)
+    
+    def test_floordiv_exact_negative(self) :
+        exp_n = random.randrange(-128, -1)
+        divisor_n = random.randrange(2, 128)
+        dividend_n = exp_n * divisor_n
+        dividend = AlgebraicInteger(dividend_n)
+        divisor = AlgebraicInteger(divisor_n)
+        expected = AlgebraicInteger(exp_n)
+        actual = dividend // divisor
+        message = f"{dividend_n} div {divisor_n}, exp. {exp_n}, got {actual}"
+        self.assertEqual(expected, actual, message)
 
-    # TODO: Tests for __floordiv__(), __truediv__()
+    def test_floordiv_exact_positive(self) :
+        exp_n = random.randrange(1, 127)
+        divisor_n = random.randrange(2, 128)
+        dividend_n = exp_n * divisor_n
+        dividend = AlgebraicInteger(dividend_n)
+        divisor = AlgebraicInteger(divisor_n)
+        expected = AlgebraicInteger(exp_n)
+        actual = dividend // divisor
+        message = f"{dividend_n} div {divisor_n}, exp. {exp_n}, got {actual}"
+        self.assertEqual(expected, actual, message)
+
+    # TODO: Tests for __truediv__(), more tests for __floordiv__()
     
     # TODO: Tests for division by zero
         
