@@ -52,6 +52,10 @@ class AlgebraicInteger :
 
     # TODO: Write tests for this
     def __floordiv__(self, divisor) :
+        if divisor.num == 0 :
+            return self
+        if self.num % divisor.num == 0 :
+            return AlgebraicInteger(self.num // divisor.num)
         return self
 
     # TODO: Write tests for this
