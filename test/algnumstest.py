@@ -188,6 +188,15 @@ class AlgebraicIntegerTest(unittest.TestCase) :
         actual = dividend // divisor
         message = f"{dividend_n} div {divisor_n}, exp. {exp_n}, got {actual}"
         self.assertEqual(expected, actual, message)
+    
+    def test_floordiv_by_zero(self) :
+        dividend_n = random.randrange(-128, 127)
+        dividend = AlgebraicInteger(dividend_n)
+        zero = AlgebraicInteger(0)
+        zero_div_msg = f"Dividing {dividend} by zero should cause error"
+        with self.assertRaises(ZeroDivisionError, msg = zero_div_msg) :
+            result = dividend // zero
+            print(zero_div_msg, "not given result", result)
 
     # TODO: Tests for __truediv__(), more tests for __floordiv__()
     
