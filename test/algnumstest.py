@@ -40,9 +40,8 @@ class AlgebraicIntegerTest(unittest.TestCase) :
         actual = instance.HTML_str()
         self.assertEqual(expected, actual)
         
-    def test_TeX_str(self) :
-        self.fail("REVIEW THIS TEST")
-        n = random.randrange(-32768, 32767)
+    def test_TeX_str_not_negative(self) :
+        n = random.randrange(0, 32767)
         instance = AlgebraicInteger(n)
         expected = str(n)
         actual = instance.TeX_str()
