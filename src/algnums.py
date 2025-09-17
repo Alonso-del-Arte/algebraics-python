@@ -16,7 +16,7 @@ class AlgebraicInteger :
         return str(self.num)
     
     def TeX_str(self) :
-        return "REWIND TO FAILING"
+        return self.__str__()
     
     def __eq__(self, other) :
         return self.num == other.num
