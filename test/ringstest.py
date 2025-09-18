@@ -76,6 +76,18 @@ class TestQuadraticRing(unittest.TestCase) :
     
     USUAL_NUMBER_OF_RINGS = 10
     
+    def test_str_imag_d_1_mod_4(self) :
+        d = -4 * random.randrange(2, 1000) + 1
+        rings_so_far = 0
+        while rings_so_far < self.USUAL_NUMBER_OF_RINGS :
+            if src.numth.squarefree(d) :
+                rings_so_far += 1
+                instance = QuadraticRing(d)
+                expected = f"O_Q(\u221A\u2212{-d})"
+                actual = instance.__str__()
+                self.assertEqual(actual, expected)
+            d -= 4
+    
     def test_str_imag_d_2_mod_4(self) :
         d = -4 * random.randrange(1, 1000) + 2
         rings_so_far = 0
