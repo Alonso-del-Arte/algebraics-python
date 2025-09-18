@@ -36,6 +36,8 @@ class QuadraticRing(IntegerRing) :
         self.radicand = d
     
     def __str__(self) :
+        if self.radicand > 0 and self.radicand % 4 == 1 :
+            return f"O_Q(\u221A{self.radicand})"
         if self.radicand > 0 :
             return f"Z[\u221A{self.radicand}]"
         if self.radicand < 0 and self.radicand % 4 == 1 :
