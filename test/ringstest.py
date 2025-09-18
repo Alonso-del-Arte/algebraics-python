@@ -95,7 +95,7 @@ class TestQuadraticRing(unittest.TestCase) :
             if src.numth.squarefree(d) :
                 rings_so_far += 1
                 instance = QuadraticRing(d)
-                expected = f"O_Q(\u221A\u2212{d})"
+                expected = f"O_Q(\u221A{d})"
                 actual = instance.__str__()
                 self.assertEqual(actual, expected)
             d += 4
