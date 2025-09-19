@@ -41,6 +41,8 @@ class QuadraticRing(IntegerRing) :
             return "Z[\u03C9]"
         if self.radicand == -1 :
             return "Z[i]"
+        if self.radicand == 5 :
+            return "Z[\u03C6]"
         if self.radicand % 4 == 3 :
             if self.radicand < 0 :
                 return f"Z[\u221A\u2212{-self.radicand}]"
