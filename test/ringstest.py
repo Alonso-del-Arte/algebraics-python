@@ -105,6 +105,12 @@ class TestQuadraticRing(unittest.TestCase) :
                 actual = instance.__str__()
                 self.assertEqual(actual, expected)
             d += 4
+            
+    def test_str_Z_phi(self) :
+        instance = QuadraticRing(5)
+        expected = "Z[\u03C6]"
+        actual = instance.__str__()
+        self.assertEqual(actual, expected)
     
     def test_str_imag_d_2_mod_4(self) :
         d = -4 * random.randrange(1, 1000) + 2
