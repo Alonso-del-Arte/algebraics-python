@@ -88,6 +88,12 @@ class TestQuadraticRing(unittest.TestCase) :
                 self.assertEqual(actual, expected)
             d -= 4
     
+    def test_str_Eisenstein(self) :
+        instance = QuadraticRing(-3)
+        expected = "Z[\u03C9]"
+        actual = instance.__str__()
+        self.assertEqual(actual, expected)
+        
     def test_str_real_d_1_mod_4(self) :
         d = 4 * random.randrange(1, 1000) + 1
         rings_so_far = 0
