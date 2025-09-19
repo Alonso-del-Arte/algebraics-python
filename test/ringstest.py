@@ -136,6 +136,12 @@ class TestQuadraticRing(unittest.TestCase) :
                 self.assertEqual(actual, expected)
             d -= 4
         
+    def test_str_Gaussian(self) :
+        instance = QuadraticRing(-1)
+        expected = "Z[i]"
+        actual = instance.__str__()
+        self.assertEqual(actual, expected)
+    
     def test_str_real_d_3_mod_4(self) :
         d = 4 * random.randrange(1, 1000) + 3
         rings_so_far = 0
