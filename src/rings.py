@@ -37,6 +37,8 @@ class QuadraticRing(IntegerRing) :
     
     def __str__(self) :
         # TODO: Refactor
+        if self.radicand == -3 :
+            return "Z[\u03C9]"
         if self.radicand == -1 :
             return "Z[i]"
         if self.radicand % 4 == 3 :
