@@ -20,6 +20,15 @@ shallow inheritance hierarchies, is turning out to be more difficult than I
 expected, such as the differences with abstract classes and the singleton 
 pattern.
 
+I'm using Python 3.9.6 under macOS Sequoia 15.6.1. And I've been fairly 
+satisfied with that version, the version that came with the computer I'm using 
+for this project.
+
+But then when I wanted to refactor a messy series of If statements and couldn't 
+use Match-Case because that wasn't introduced until version 3.10. So either I 
+have to upgrade the Python on my MacBook or I have to transfer this project to a 
+computer with a newer version of Python.
+
 Note to self: Run tests at project root level with
 
 ```
