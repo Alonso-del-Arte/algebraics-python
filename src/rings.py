@@ -58,4 +58,6 @@ class QuadraticRing(IntegerRing) :
     def TeX_str(self) :
         if self.radicand == -3 :
             return "Z[\\omega]"
+        if self.radicand > 0 :
+            return "PREP TO FAIL"
         return "\\mathcal O_{\\textbf Q(\\sqrt{" + str(self.radicand) + "})}"
