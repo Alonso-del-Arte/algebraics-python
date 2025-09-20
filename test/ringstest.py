@@ -180,7 +180,7 @@ class TestQuadraticRing(unittest.TestCase) :
     
     def test_TeX_str_Eisenstein(self) :
         instance = QuadraticRing(-3)
-        expected = "Z[\\omega]"
+        expected = "\\textbf Z[\\omega]"
         actual = instance.TeX_str()
         self.assertEqual(actual, expected)
         
