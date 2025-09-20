@@ -184,7 +184,7 @@ class TestQuadraticRing(unittest.TestCase) :
         actual = instance.TeX_str()
         self.assertEqual(actual, expected)
         
-    def test_str_real_d_1_mod_4(self) :
+    def test_TeX_str_real_d_1_mod_4(self) :
         d = 4 * random.randrange(1, 1000) + 1
         rings_so_far = 0
         while rings_so_far < self.USUAL_NUMBER_OF_RINGS :
@@ -196,7 +196,7 @@ class TestQuadraticRing(unittest.TestCase) :
                 self.assertEqual(actual, expected)
             d += 4
             
-    def test_str_Z_phi(self) :
+    def test_TeX_str_Z_phi(self) :
         instance = QuadraticRing(5)
         expected = "\\textbf Z[\\phi]"
         actual = instance.TeX_str()
