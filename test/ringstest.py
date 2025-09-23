@@ -209,7 +209,7 @@ class TestQuadraticRing(unittest.TestCase) :
             if src.numth.squarefree(d) :
                 rings_so_far += 1
                 instance = QuadraticRing(d)
-                expected = "\\textbf Z[\sqrt{" + str(d) + "}]"
+                expected = "\\textbf Z[\\sqrt{" + str(d) + "}]"
                 actual = instance.TeX_str()
                 self.assertEqual(actual, expected)
             d -= 4
