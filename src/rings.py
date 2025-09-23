@@ -60,6 +60,6 @@ class QuadraticRing(IntegerRing) :
             return "\\textbf Z[\\omega]"
         if self.radicand == 5 :
             return "\\textbf Z[\\phi]"
-        if self.radicand % 4 == 2 or self.radicand % 4 == 3 :
-            return "\\textbf Z[\\sqrt{" + str(self.radicand) + "}]"
-        return "\\mathcal O_{\\textbf Q(\\sqrt{" + str(self.radicand) + "})}"
+        if self.radicand % 4 == 1 :
+            return "\\mathcal O_{\\textbf Q(\\sqrt{" + str(self.radicand) + "})}"
+        return "\\textbf Z[\\sqrt{" + str(self.radicand) + "}]"
