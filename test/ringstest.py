@@ -268,5 +268,11 @@ class TestQuadraticRing(unittest.TestCase) :
                 self.assertEqual(actual, expected)
             d -= 4
     
+    def test_TeX_blackboardbold_str_Eisenstein(self) :
+        instance = QuadraticRing(-3)
+        expected = "\\mathbb Z[\\omega]"
+        actual = instance.TeX_blackboardbold_str()
+        self.assertEqual(actual, expected)
+        
 if __name__ == '__main__' :
     unittest.main()
