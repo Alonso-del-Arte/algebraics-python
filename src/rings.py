@@ -70,6 +70,6 @@ class QuadraticRing(IntegerRing) :
         if self.radicand == - 3 :
             return "\\mathbb Z[\\omega]"
         if self.radicand > 0 :
-            return "NO TEST YET"
+            return "\\mathcal O_{\\mathbb Q(\\sqrt{" + str(self.radicand) + "})}"
         return "\\mathcal O_{\\mathbb Q(\\sqrt{" + str(self.radicand) + "})}"
     
