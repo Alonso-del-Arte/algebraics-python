@@ -58,6 +58,8 @@ class QuadraticRing(IntegerRing) :
     def TeX_str(self) :
         if self.radicand == -3 :
             return "\\textbf Z[\\omega]"
+        if self.radicand == -1 :
+            return "\\textbf Z[i]"
         if self.radicand == 5 :
             return "\\textbf Z[\\phi]"
         if self.radicand % 4 == 1 :
