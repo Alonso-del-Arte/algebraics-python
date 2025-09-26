@@ -69,6 +69,8 @@ class QuadraticRing(IntegerRing) :
     def TeX_blackboardbold_str(self) :
         if self.radicand % 4 == 2 and self.radicand < 0 :
             return "\\mathbb Z[\\sqrt{" + str(self.radicand) + "}]"
+        if self.radicand % 4 == 2 and self.radicand > 0 :
+            return "\\mathbb Z[\\sqrt{" + str(self.radicand) + "}]"
         if self.radicand == -3 :
             return "\\mathbb Z[\\omega]"
         if self.radicand == 5 :
