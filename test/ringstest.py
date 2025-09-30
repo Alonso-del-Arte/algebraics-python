@@ -328,5 +328,11 @@ class TestQuadraticRing(unittest.TestCase) :
                 self.assertEqual(actual, expected)
             d -= 4
         
+    def test_TeX_blackboardbold_str_Gaussian(self) :
+        instance = QuadraticRing(-1)
+        expected = "\\mathbb Z[i]"
+        actual = instance.TeX_blackboardbold_str()
+        self.assertEqual(actual, expected)
+    
 if __name__ == '__main__' :
     unittest.main()
