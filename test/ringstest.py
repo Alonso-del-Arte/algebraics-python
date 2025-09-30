@@ -364,5 +364,17 @@ class TestQuadraticRing(unittest.TestCase) :
         actual = instance.HTML_str()
         self.assertEqual(actual, expected)
         
+    def test_HTML_str_real_d_1_mod_4(self) :
+        d = 4 * random.randrange(1, 1000) + 1
+        rings_so_far = 0
+        while rings_so_far < self.USUAL_NUMBER_OF_RINGS :
+            if src.numth.squarefree(d) :
+                rings_so_far += 1
+                instance = QuadraticRing(d)
+                expected = f"<i>O</i><sub><b>Q</b>(&radic;{d})</sub>"
+                actual = instance.HTML_str()
+                self.assertEqual(actual, expected)
+            d += 4
+            
 if __name__ == '__main__' :
     unittest.main()
