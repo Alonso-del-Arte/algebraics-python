@@ -81,6 +81,8 @@ class QuadraticRing(IntegerRing) :
     
     def HTML_str(self) :
         if self.radicand % 4 == 2 :
+            if self.radicand > 0 :
+                return f"<b>Z</b>[&radic;{self.radicand}]"
             return f"<b>Z</b>[&radic;&minus;{-self.radicand}]"
         if self.radicand == -3 :
             return "<b>Z</b>[&omega;]"
