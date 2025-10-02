@@ -418,5 +418,11 @@ class TestQuadraticRing(unittest.TestCase) :
                 self.assertEqual(actual, expected)
             d -= 4
         
+    def test_HTML_str_Gaussian(self) :
+        instance = QuadraticRing(-1)
+        expected = "<b>Z</b>[<i>i</i>]"
+        actual = instance.HTML_str()
+        self.assertEqual(actual, expected)
+    
 if __name__ == '__main__' :
     unittest.main()
