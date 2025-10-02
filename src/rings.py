@@ -80,6 +80,8 @@ class QuadraticRing(IntegerRing) :
         return "\\mathcal O_{\\mathbb Q(\\sqrt{" + str(self.radicand) + "})}"
     
     def HTML_str(self) :
+        if self.radicand == -1 :
+            return "<b>Z</b>[<i>i</i>]"
         if self.radicand % 4 == 2 :
             if self.radicand > 0 :
                 return f"<b>Z</b>[&radic;{self.radicand}]"
