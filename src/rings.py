@@ -87,7 +87,7 @@ class QuadraticRing(IntegerRing) :
         if self.radicand == 5 :
             return "<b>Z</b>[&phi;]"
         if self.radicand % 4 == 1 :
-            if self.racidand > 0 :
+            if self.radicand > 0 :
                 return f"<i>O</i><sub><b>Q</b>(&radic;{self.radicand})</sub>"
             return f"<i>O</i><sub><b>Q</b>(&radic;&minus;{-self.radicand})</sub>"
         if self.radicand > 0 :
