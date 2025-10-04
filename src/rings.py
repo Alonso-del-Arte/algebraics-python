@@ -95,5 +95,7 @@ class QuadraticRing(IntegerRing) :
         return f"<b>Z</b>[&radic;&minus;{-self.radicand}]"
     
     def HTML_blackboardbold_str(self) :
+        if self.radicand == -3 :
+            return "&#x2124;[&omega;]"
         return f"<i>O</i><sub>&#x211A;(&radic;&minus;{-self.radicand})</sub>"
     
